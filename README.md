@@ -1,2 +1,2 @@
-# putters-bar-grile
+# putters-bar-grille
 Sports Bar Restaurant
