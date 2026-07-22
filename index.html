@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Putters Bar &amp; Grill — Sports Bar &amp; Indoor Golf | Verona, WI</title>
-  <meta name="description" content="Putters Bar &amp; Grill in Verona, WI — a full sports bar with TrackMan golf simulators, cold drinks, big screens, and a scratch kitchen. New menu coming soon.">
+  <title>Putters Bar &amp; Grill — Sports Bar | Verona, WI</title>
+  <meta name="description" content="Putters Bar &amp; Grill in Verona, WI — your home for game day. Wall-to-wall screens, cold drinks, and a scratch kitchen. New menu coming soon.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +21,9 @@
         <span class="ticker__sep"></span>
         <span class="ticker__item ticker__item--accent">NEW MENU: COMING SOON</span>
         <span class="ticker__sep"></span>
-        <span class="ticker__item">6 TRACKMAN GOLF SIMULATORS</span>
+        <span class="ticker__item">YOUR HOME FOR GAME DAY</span>
         <span class="ticker__sep"></span>
-        <span class="ticker__item">300+ VIRTUAL COURSES</span>
+        <span class="ticker__item">FULL BAR &middot; SCRATCH KITCHEN &middot; PATIO</span>
         <span class="ticker__sep"></span>
         <span class="ticker__item ticker__item--accent">503 W VERONA AVE &middot; VERONA, WI</span>
         <span class="ticker__sep"></span>
@@ -43,10 +43,10 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">MENU</button>
       <nav class="nav" id="mainNav" aria-label="Main navigation">
         <a href="#watch" class="is-active">The Bar</a>
-        <a href="#golf">Golf Sims</a>
+        <a href="#events">Events</a>
         <a href="menu.html">Menu</a>
         <a href="#visit">Visit Us</a>
-        <a class="btn btn--primary btn--sm" href="tel:+16084970170">Book a Bay</a>
+        <a class="btn btn--primary btn--sm" href="tel:+16084970170">Book a Table</a>
       </nav>
     </div>
   </header>
@@ -54,13 +54,14 @@
   <main>
     <!-- Hero -->
     <section class="hero">
+      <div class="hero__bg" id="heroBg" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div>
           <span class="eyebrow"><span class="ticker__dot"></span> Est. 2026 &middot; Verona, Wisconsin</span>
-          <h1>Every game.<br>Every swing.<br><em>Every round.</em></h1>
-          <p class="lede">Putters Bar &amp; Grill is Verona's home for game day — wall-to-wall screens, cold drinks, TrackMan golf simulators, and a kitchen that takes bar food seriously. Same great spot, brand-new name.</p>
+          <h1>Every game.<br>Every season.<br><em>Every fan.</em></h1>
+          <p class="lede">Putters Bar &amp; Grill is Verona's home for game day — wall-to-wall screens, cold taps, and a kitchen that takes bar food seriously. Grab a seat, the game's about to start.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="tel:+16084970170">Book a Bay</a>
+            <a class="btn btn--primary" href="tel:+16084970170">Book a Table</a>
             <a class="btn btn--ghost" href="menu.html">Peek the Menu</a>
           </div>
         </div>
@@ -122,19 +123,30 @@
       </div>
     </section>
 
-    <!-- Golf sims -->
-    <section class="section reveal" id="golf">
+    <!-- Events -->
+    <section class="section reveal" id="events">
       <div class="container">
         <div class="section__head">
-          <span class="kicker">Indoor Golf</span>
-          <h2>Tee off, rain or shine</h2>
-          <p>Six private TrackMan simulator bays put the world's best courses — and your stats — on the big screen. No dress code, no etiquette police. Just golf, your way.</p>
+          <span class="kicker">The Lineup</span>
+          <h2>There's always a game on</h2>
+          <p>Football Sundays, Badger Saturdays, fight nights, and everything in between — if it's on, it's on here.</p>
         </div>
-        <div class="stats">
-          <div class="stat"><b>6</b><span>TrackMan Bays</span></div>
-          <div class="stat"><b>300+</b><span>Virtual Courses</span></div>
-          <div class="stat"><b>6</b><span>Mini-Games for All Ages</span></div>
-          <div class="stat"><b>1</b><span>Nineteenth Hole (the Bar)</span></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card__icon">&#127944;</div>
+            <h3>Watch Parties</h3>
+            <p>Packers, Badgers, Brewers, Bucks — sound on for the big games, drink specials to match.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">&#127919;</div>
+            <h3>Trivia &amp; Game Nights</h3>
+            <p>Weeknight trivia, darts, and friendly competition. Call or stop in for this week's lineup.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">&#127881;</div>
+            <h3>Private Parties</h3>
+            <p>Birthdays, watch parties, work outings — reserve your space and we'll handle the rest.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -198,7 +210,7 @@
       <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
       <nav aria-label="Footer">
         <a href="#watch">The Bar</a>
-        <a href="#golf">Golf Sims</a>
+        <a href="#events">Events</a>
         <a href="menu.html">Menu</a>
         <a href="#visit">Visit</a>
       </nav>

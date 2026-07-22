@@ -2,10 +2,10 @@
 
 Website for **Putters Bar & Grill** (formerly The Bogey Factory) — 503 W Verona Ave, Suite 400, Verona, WI 53593.
 
-Sports bar + 6 TrackMan golf simulators. Dark "Stadium Prime Green" theme. Menu coming soon.
+A game-day sports bar. Dark "Stadium Prime Green" theme. Menu coming soon.
 
 ## Structure
-- `index.html` — home page (bar, golf sims, visit info)
+- `index.html` — home page (bar, events, visit info)
 - `menu.html` — menu coming-soon page
 - `css/style.css` — all styles
 - `js/main.js` — nav, ticker, flipboard, scroll reveal

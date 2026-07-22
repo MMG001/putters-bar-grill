@@ -74,3 +74,24 @@
   }, { threshold: 0.12 });
   items.forEach(function (el) { io.observe(el); });
 })();
+
+// Hero parallax
+(function () {
+  var bg = document.getElementById("heroBg");
+  if (!bg) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var ticking = false;
+  function update() {
+    // hero sits at the top of the page, so scrollY maps directly
+    var y = window.scrollY * 0.35;
+    bg.style.transform = "translate3d(0," + y + "px,0)";
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+  update();
+})();
