@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Putters Bar &amp; Grill — Sports Bar &amp; Indoor Golf | Verona, WI</title>
+  <meta name="description" content="Putters Bar &amp; Grill in Verona, WI — a full sports bar with TrackMan golf simulators, cold drinks, big screens, and a scratch kitchen. New menu coming soon.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Live ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <div class="ticker__group">
+        <span class="ticker__item"><span class="ticker__dot"></span>NOW PLAYING AS PUTTERS BAR &amp; GRILL</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">NEW MENU: COMING SOON</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">6 TRACKMAN GOLF SIMULATORS</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">300+ VIRTUAL COURSES</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">503 W VERONA AVE &middot; VERONA, WI</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">CALL (608) 497-0170</span>
+        <span class="ticker__sep"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Putters Bar &amp; Grill home">
+        <img src="assets/logo.png" alt="Putters Bar &amp; Grill logo">
+        <span>Putters</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">MENU</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="#watch" class="is-active">The Bar</a>
+        <a href="#golf">Golf Sims</a>
+        <a href="menu.html">Menu</a>
+        <a href="#visit">Visit Us</a>
+        <a class="btn btn--primary btn--sm" href="tel:+16084970170">Book a Bay</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <span class="eyebrow"><span class="ticker__dot"></span> Est. 2026 &middot; Verona, Wisconsin</span>
+          <h1>Every game.<br>Every swing.<br><em>Every round.</em></h1>
+          <p class="lede">Putters Bar &amp; Grill is Verona's home for game day — wall-to-wall screens, cold drinks, TrackMan golf simulators, and a kitchen that takes bar food seriously. Same great spot, brand-new name.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="tel:+16084970170">Book a Bay</a>
+            <a class="btn btn--ghost" href="menu.html">Peek the Menu</a>
+          </div>
+        </div>
+        <div class="hero__logo">
+          <img src="assets/logo.png" alt="Putters Bar &amp; Grill — Est. 2026">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu coming soon scoreboard -->
+    <section class="scoreboard-section reveal" id="menu">
+      <div class="container">
+        <div class="scoreboard">
+          <p class="scoreboard__label">&#9679; Kitchen Scoreboard &#9679;</p>
+          <div class="flipboard" id="flipboard" aria-label="Menu coming soon">
+            <!-- tiles injected by JS -->
+          </div>
+          <p class="scoreboard__note">Our new game-day menu is in the final round of taste testing. Scratch-kitchen favorites, shareables, and drink specials are on the way.</p>
+          <a class="btn btn--ghost" href="menu.html">See What's Cooking</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The bar -->
+    <section class="section reveal" id="watch">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">The Bar</span>
+          <h2>Built for game day</h2>
+          <p>Whether it's the Packers, the Badgers, or a Sunday major, there isn't a bad seat in the house.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="card__icon">&#128250;</div>
+            <h3>Wall-to-Wall Screens</h3>
+            <p>Big screens throughout the bar so you never miss a snap, pitch, or putt — sound on for the big ones.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">&#127866;</div>
+            <h3>Full Bar</h3>
+            <p>Cold taps, Wisconsin favorites, and cocktails poured right, from first tee time to last call.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">&#127831;</div>
+            <h3>Scratch Kitchen</h3>
+            <p>Burgers, curds, and shareables made in-house. The new Putters menu drops soon.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">&#9728;&#65039;</div>
+            <h3>Outdoor Patio</h3>
+            <p>A spacious patio for warm nights, cold drinks, and post-round debriefs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Golf sims -->
+    <section class="section reveal" id="golf">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Indoor Golf</span>
+          <h2>Tee off, rain or shine</h2>
+          <p>Six private TrackMan simulator bays put the world's best courses — and your stats — on the big screen. No dress code, no etiquette police. Just golf, your way.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>6</b><span>TrackMan Bays</span></div>
+          <div class="stat"><b>300+</b><span>Virtual Courses</span></div>
+          <div class="stat"><b>6</b><span>Mini-Games for All Ages</span></div>
+          <div class="stat"><b>1</b><span>Nineteenth Hole (the Bar)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band reveal">
+      <div class="container">
+        <h2>Leagues &middot; Parties &middot; Corporate Events</h2>
+        <p>Rent a bay, a room, or the whole house. We'll handle the food, the screens, and the scorekeeping.</p>
+        <a class="btn btn--primary" href="tel:+16084970170">Call (608) 497-0170</a>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section reveal" id="visit">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Visit Us</span>
+          <h2>Find the clubhouse</h2>
+        </div>
+        <div class="visit">
+          <div class="visit__info">
+            <dl>
+              <div>
+                <dt>Address</dt>
+                <dd>503 W Verona Ave, Suite 400<br>Verona, WI 53593
+                  <small>Formerly The Bogey Factory</small>
+                </dd>
+              </div>
+              <div>
+                <dt>Phone</dt>
+                <dd><a href="tel:+16084970170">(608) 497-0170</a></dd>
+              </div>
+              <div>
+                <dt>Hours</dt>
+                <dd>
+                  <ul class="hours">
+                    <li><span>Monday</span><span>4:00 PM &ndash; 10:00 PM</span></li>
+                    <li><span>Tuesday &ndash; Friday</span><span>10:00 AM &ndash; 10:00 PM</span></li>
+                    <li><span>Saturday &ndash; Sunday</span><span>Call for hours</span></li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="map-frame">
+            <iframe
+              title="Map to Putters Bar & Grill, 503 W Verona Ave, Verona, WI"
+              src="https://www.google.com/maps?q=503+W+Verona+Ave+Suite+400,+Verona,+WI+53593&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
+      <nav aria-label="Footer">
+        <a href="#watch">The Bar</a>
+        <a href="#golf">Golf Sims</a>
+        <a href="menu.html">Menu</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <p>&copy; 2026 Putters Bar &amp; Grill &middot; Verona, WI</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
