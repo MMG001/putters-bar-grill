@@ -6,16 +6,16 @@
    ========================================================================== */
 
 :root {
-  --surface: #10150f;
-  --surface-lowest: #0a0f0a;
-  --surface-low: #181d17;
-  --surface-container: #1c211b;
-  --surface-high: #262b25;
-  --surface-highest: #313630;
-  --on-surface: #dfe4db;
-  --on-surface-variant: #becabb;
-  --outline: #899487;
-  --outline-variant: #3f493e;
+  --surface: #0d0d0d;
+  --surface-lowest: #060606;
+  --surface-low: #151515;
+  --surface-container: #1a1a1a;
+  --surface-high: #242424;
+  --surface-highest: #2e2e2e;
+  --on-surface: #e4e4e2;
+  --on-surface-variant: #b9bdb8;
+  --outline: #8b8f8a;
+  --outline-variant: #363636;
   --primary: #7fda8b;
   --on-primary: #003913;
   --primary-container: #006d2c;
@@ -83,7 +83,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(16, 21, 15, 0.94);
+  background: rgba(13, 13, 13, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--outline-variant);
 }
@@ -147,7 +147,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: var(--surface-lowest);
 }
 .page-hero--photo { background-position: center; background-size: cover; }
-.page-hero__scrim { position: absolute; inset: 0; background: linear-gradient(rgba(10, 15, 10, 0.82), rgba(10, 15, 10, 0.72)); }
+.page-hero__scrim { position: absolute; inset: 0; background: linear-gradient(rgba(6, 6, 6, 0.84), rgba(6, 6, 6, 0.74)); }
 .page-hero .container { position: relative; z-index: 1; }
 .chip {
   display: inline-flex; align-items: center; gap: 8px;
@@ -183,7 +183,7 @@ h1 em, .h1 em { font-style: italic; color: var(--primary); }
 .hero__bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(rgba(10, 15, 10, 0.85), rgba(16, 21, 15, 0.78)),
+    linear-gradient(rgba(6, 6, 6, 0.86), rgba(13, 13, 13, 0.78)),
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(127, 218, 139, 0.16), transparent 60%);
 }
 .hero__inner {
@@ -290,7 +290,7 @@ h2 em { font-style: italic; color: var(--primary); }
 
 /* ---------- Photo helpers ---------- */
 .photo-frame { border: 1px solid var(--outline-variant); border-radius: var(--r-lg); overflow: hidden; position: relative; }
-.photo-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(10, 15, 10, 0.55)); pointer-events: none; }
+.photo-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.55)); pointer-events: none; }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 .photo-frame--caption figcaption {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
@@ -329,7 +329,7 @@ h2 em { font-style: italic; color: var(--primary); }
   font-family: var(--font-mono); font-weight: 700;
   font-size: clamp(22px, 4.2vw, 42px); line-height: 1;
   color: var(--primary);
-  background: linear-gradient(#232823, #131813 48%, #0a0f0a 52%, #1a1f19);
+  background: linear-gradient(#222222, #121212 48%, #060606 52%, #191919);
   border: 1px solid var(--outline-variant);
   border-radius: 6px;
   padding: 0.42em 0.32em; min-width: 1.35em;
@@ -403,7 +403,7 @@ h2 em { font-style: italic; color: var(--primary); }
   padding: 96px 0; text-align: center;
   border-bottom: 1px solid var(--outline-variant);
   background:
-    linear-gradient(rgba(10, 15, 10, 0.85), rgba(10, 15, 10, 0.82)),
+    linear-gradient(rgba(6, 6, 6, 0.86), rgba(6, 6, 6, 0.82)),
     url("../assets/img/bar-friends.jpg") center 40% / cover no-repeat,
     var(--surface-lowest);
 }
