@@ -7,7 +7,7 @@ A game-day sports bar. "Champion's Reserve" theme (Modern-Athletic, dark forest 
 ## Pages
 - `index.html` — home (hero, live now, daily specials, reviews)
 - `about.html` — story, mission, atmosphere
-- `menu.html` — coming-soon flipboard + sample sneak-peek gallery
+- `menu.html` — tabbed food menu (Appetizers, Power Bowls, Burgers, Sandwiches, Wraps, Pizza)
 - `specials.html` — weekly lineup & private events
 - `contact.html` — info, hours, contact form (mailto), map
 

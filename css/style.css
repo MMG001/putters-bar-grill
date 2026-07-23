@@ -346,19 +346,6 @@ h2 em { font-style: italic; color: var(--primary); }
 .menu-card:hover { border-color: var(--primary); box-shadow: 0 0 20px rgba(127, 218, 139, 0.1); }
 .menu-card__img { position: relative; aspect-ratio: 3 / 2; overflow: hidden; }
 .menu-card__img img { width: 100%; height: 100%; object-fit: cover; }
-.menu-card__img::after {
-  content: "SAMPLE";
-  position: absolute; inset: 0;
-  display: grid; place-items: center;
-  font-family: var(--font-display); font-weight: 800;
-  font-size: clamp(42px, 8vw, 60px); letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.28);
-  text-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
-  transform: rotate(-18deg) scale(1.05);
-  border-top: 2px solid rgba(255, 255, 255, 0.14);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.14);
-  pointer-events: none; user-select: none;
-}
 .menu-card__body { padding: 20px 20px 24px; }
 .menu-card__row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
 .menu-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 17px; text-transform: uppercase; }
@@ -366,6 +353,31 @@ h2 em { font-style: italic; color: var(--primary); }
 .menu-card__price { font-family: var(--font-mono); font-weight: 700; font-size: 16px; color: var(--primary); white-space: nowrap; }
 .menu-card p { color: var(--on-surface-variant); font-size: 14.5px; line-height: 1.55; }
 .menu-disclaimer { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-surface-variant); text-align: center; margin-top: 40px; }
+
+
+/* ---------- Menu tabs ---------- */
+.tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 48px; }
+.tab-btn {
+  font-family: var(--font-body); font-weight: 700; font-size: 15.5px;
+  color: var(--on-surface);
+  background: var(--surface-high);
+  border: 1px solid transparent;
+  border-radius: var(--r-lg);
+  padding: 13px 26px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { border-color: var(--primary); color: var(--primary); }
+.tab-btn.is-active { background: var(--primary); color: var(--on-primary); }
+.tab-btn.is-active:hover { color: var(--on-primary); }
+.tab-panel { display: none; }
+.tab-panel.is-active { display: block; animation: fadein 0.35s ease; }
+@keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.tab-panel__intro { color: var(--on-surface-variant); max-width: 70ch; margin-bottom: 32px; }
+
+/* ---------- Text-only menu list ---------- */
+.menu-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 10px 56px; }
+.menu-list__item { padding: 14px 0; border-bottom: 1px dashed var(--outline-variant); }
 
 /* ---------- Category chips ---------- */
 .cat-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }

@@ -115,3 +115,24 @@
       "&body=" + encodeURIComponent(body);
   });
 })();
+
+// Menu category tabs
+(function () {
+  var btns = document.querySelectorAll(".tab-btn");
+  if (!btns.length) return;
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".tab-btn").forEach(function (b) {
+        b.classList.remove("is-active");
+        b.setAttribute("aria-selected", "false");
+      });
+      document.querySelectorAll(".tab-panel").forEach(function (p) {
+        p.classList.remove("is-active");
+      });
+      btn.classList.add("is-active");
+      btn.setAttribute("aria-selected", "true");
+      var panel = document.getElementById(btn.dataset.tab);
+      if (panel) panel.classList.add("is-active");
+    });
+  });
+})();
