@@ -24,37 +24,6 @@
   track.appendChild(track.firstElementChild.cloneNode(true));
 })();
 
-// Flipboard "MENU COMING SOON" tiles
-(function () {
-  var board = document.getElementById("flipboard");
-  if (!board) return;
-  var text = board.closest(".coming-hero") ? "COMING SOON" : "MENU COMING SOON";
-  text.split("").forEach(function (ch, i) {
-    var tile = document.createElement("span");
-    if (ch === " ") {
-      tile.className = "tile tile--space";
-      tile.innerHTML = "&nbsp;";
-    } else {
-      tile.className = "tile";
-      tile.textContent = ch;
-      // subtle staggered "settle" animation unless reduced motion
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        tile.style.opacity = "0";
-        tile.style.transform = "rotateX(90deg)";
-        tile.style.transition = "opacity .35s ease, transform .35s ease";
-        tile.style.transitionDelay = i * 45 + "ms";
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            tile.style.opacity = "1";
-            tile.style.transform = "none";
-          });
-        });
-      }
-    }
-    board.appendChild(tile);
-  });
-})();
-
 // Scroll reveal
 (function () {
   var items = document.querySelectorAll(".reveal");
