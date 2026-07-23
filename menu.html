@@ -3,137 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu — Coming Soon | Putters Bar &amp; Grill</title>
-  <meta name="description" content="The new Putters Bar &amp; Grill menu is coming soon. Scratch-kitchen game day favorites in Verona, WI.">
+  <title>The Playbook — Menu Coming Soon | Putters Bar &amp; Grill</title>
+  <meta name="description" content="The new Putters Bar &amp; Grill menu is coming soon. Sneak a peek at the game-day food headed to Verona, WI.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,700;0,800;1,800&family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <div class="ticker__group">
+        <span class="ticker__item"><span class="ticker__dot"></span>NOW PLAYING AS PUTTERS BAR &amp; GRILL</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">NEW MENU: COMING SOON</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">YOUR HOME FOR GAME DAY</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">FULL BAR &middot; SCRATCH KITCHEN &middot; PATIO</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">503 W VERONA AVE &middot; VERONA, WI</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">CALL (608) 497-0170</span>
+        <span class="ticker__sep"></span>
+      </div>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Putters Bar &amp; Grill home">
         <img src="assets/logo.png" alt="Putters Bar &amp; Grill logo">
-        <span>Putters</span>
+        <span>Putters Bar &amp; Grill</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">MENU</button>
       <nav class="nav" id="mainNav" aria-label="Main navigation">
-        <a href="index.html#watch">The Bar</a>
-        <a href="index.html#events">Events</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="menu.html" class="is-active">Menu</a>
-        <a href="index.html#visit">Visit Us</a>
-        <a class="btn btn--primary btn--sm" href="tel:+16084970170">Book a Table</a>
+        <a href="specials.html">Specials</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Book a Table</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="coming-hero">
-      <div>
-        <span class="eyebrow"><span class="ticker__dot"></span> Kitchen Status: Prepping</span>
-        <div class="flipboard" id="flipboard" aria-label="Coming soon" style="margin-bottom:32px;">
-          <!-- tiles injected by JS -->
-        </div>
-        <h1>The new menu is<br>almost off the grill</h1>
-        <p>We're putting the finishing touches on the first official Putters Bar &amp; Grill menu — scratch-made burgers, Wisconsin cheese curds, shareables, and game-day drink specials. Check back soon, or stop in and see what the kitchen is running today.</p>
-        <div class="hero__actions" style="justify-content:center;">
-          <a class="btn btn--primary" href="tel:+16084970170">Call for Today's Specials</a>
-          <a class="btn btn--ghost" href="#sneak-peek">See the Sneak Peek</a>
+    <section class="page-hero page-hero--photo" style="background-image:url('assets/img/snacks.jpg');">
+      <div class="page-hero__scrim"></div>
+      <div class="container">
+        <span class="chip chip--live"><span class="ticker__dot ticker__dot--live"></span> Live Kitchen: Prepping</span>
+        <h1>The <em>playbook</em></h1>
+        <p class="lede">Championship flavors, drafted for the ultimate game day. The full menu is in its final round of taste testing &mdash; here's a sneak peek.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#sneak-peek">See the Sneak Peek</a>
+          <a class="btn btn--outline" href="tel:+16084970170">Call for Today's Specials</a>
         </div>
       </div>
     </section>
 
-    <!-- Sneak peek gallery -->
+    <section class="section section--tight reveal">
+      <div class="container">
+        <div class="scoreboard">
+          <p class="scoreboard__label">&#9679; Kitchen Scoreboard &#9679;</p>
+          <div class="flipboard" id="flipboard" aria-label="Menu coming soon"></div>
+          <p class="scoreboard__note">Scratch-made burgers, Wisconsin cheese curds, shareables, and game-day drink specials are on the way. Stop in to see what the kitchen is running today.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="sneak-peek">
       <div class="container">
         <div class="section__head">
           <span class="kicker">Sneak Peek</span>
           <h2>A taste of what's coming</h2>
-          <p>Straight from the test kitchen — a first look at the kind of game-day food Putters will be serving. Sample items shown; the full menu drops soon.</p>
+          <p>Straight from the test kitchen &mdash; a first look at the kind of game-day food Putters will be serving.</p>
+        </div>
+        <div class="cat-chips" aria-label="Menu categories">
+          <a href="#sneak-peek">Starting Lineup</a>
+          <a href="#sneak-peek">Main Events</a>
+          <a href="#sneak-peek">Handhelds</a>
+          <a href="#sneak-peek">Draft Picks</a>
         </div>
         <div class="menu-grid">
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/bacon-burger.jpg" alt="Bacon cheeseburger topped with crispy onions and a pickle, served with tater tots" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>The Clubhouse Burger</h3><span class="menu-card__price">$14.99</span></div>
+              <div class="menu-card__row"><h3>The Clubhouse Burger</h3><span class="dots"></span><span class="menu-card__price">$14.99</span></div>
               <p>Half-pound smash patty, applewood bacon, melted cheese, crispy onions, and a pickle on a toasted brioche bun. Served with tots.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/buffalo-wings.jpg" alt="Buffalo chicken wings with celery sticks" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Buffalo Wings</h3><span class="menu-card__price">$12.99</span></div>
+              <div class="menu-card__row"><h3>Buffalo Wings</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
               <p>Jumbo wings tossed in classic buffalo sauce, served with celery and house-made ranch or blue cheese.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/dry-rub-wings.jpg" alt="Dry rub chicken wings with a basket of house chips" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Dry Rub Wings</h3><span class="menu-card__price">$12.99</span></div>
+              <div class="menu-card__row"><h3>Dry Rub Wings</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
               <p>Crispy jumbo wings dusted in our signature smoky dry rub, with a basket of seasoned house chips.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/brisket-sandwich.jpg" alt="BBQ brisket sandwich with melted cheese and crispy onions, served with house chips" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Brisket Stack</h3><span class="menu-card__price">$15.99</span></div>
+              <div class="menu-card__row"><h3>Brisket Stack</h3><span class="dots"></span><span class="menu-card__price">$15.99</span></div>
               <p>Slow-smoked brisket piled on brioche with melted cheese, crispy onions, and sweet BBQ drizzle. Served with house chips.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/brisket-wrap.jpg" alt="Brisket wrap halves with greens, served with house chips" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Smokehouse Brisket Wrap</h3><span class="menu-card__price">$13.99</span></div>
+              <div class="menu-card__row"><h3>Smokehouse Brisket Wrap</h3><span class="dots"></span><span class="menu-card__price">$13.99</span></div>
               <p>Chopped smoked brisket, crispy onions, fresh greens, and house sauce rolled in a warm tortilla, with house chips.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/buffalo-wrap.jpg" alt="Buffalo chicken wrap with lettuce and tomato, served with chips" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Buffalo Chicken Wrap</h3><span class="menu-card__price">$12.99</span></div>
+              <div class="menu-card__row"><h3>Buffalo Chicken Wrap</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
               <p>Crispy buffalo-tossed chicken with lettuce, tomato, and cool ranch in a spinach tortilla. Served with chips.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/chicken-sandwich.jpg" alt="Crispy fried chicken sandwich topped with cheese and salsa, served with chips and a pickle" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Crispy Chicken Sandwich</h3><span class="menu-card__price">$13.99</span></div>
+              <div class="menu-card__row"><h3>Crispy Chicken Sandwich</h3><span class="dots"></span><span class="menu-card__price">$13.99</span></div>
               <p>Buttermilk-fried chicken breast with melted cheese, sweet-heat salsa, and pickles on toasted brioche. Served with chips.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/chicken-tacos.jpg" alt="Three grilled chicken street tacos with a side of street corn" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Chicken Street Tacos</h3><span class="menu-card__price">$11.99</span></div>
+              <div class="menu-card__row"><h3>Chicken Street Tacos</h3><span class="dots"></span><span class="menu-card__price">$11.99</span></div>
               <p>Three grilled chicken tacos with cotija, cilantro, and chipotle crema, plus a side of roasted street corn.</p>
             </div>
           </article>
           <article class="menu-card">
             <div class="menu-card__img"><img src="assets/img/menu/cheese-fries.jpg" alt="Loaded fries with cheese sauce, bacon, and green onions" loading="lazy"></div>
             <div class="menu-card__body">
-              <div class="menu-card__row"><h3>Loaded Cheese Fries</h3><span class="menu-card__price">$9.99</span></div>
-              <p>Hand-cut fries smothered in beer cheese, topped with crispy bacon and green onions. Built for sharing — or not.</p>
+              <div class="menu-card__row"><h3>Loaded Cheese Fries</h3><span class="dots"></span><span class="menu-card__price">$9.99</span></div>
+              <p>Hand-cut fries smothered in beer cheese, topped with crispy bacon and green onions. Built for sharing &mdash; or not.</p>
             </div>
           </article>
         </div>
         <p class="menu-disclaimer">&#9650; Sample menu &mdash; items, descriptions &amp; prices subject to change before launch &#9650;</p>
       </div>
     </section>
+
+    <section class="cta-band reveal">
+      <div class="container">
+        <h2>Hungry for more?</h2>
+        <p>The full Putters menu drops soon. In the meantime, the kitchen and taps are open &mdash; come see us.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn--primary" href="contact.html">Plan Your Visit</a>
+          <a class="btn btn--outline" href="tel:+16084970170">(608) 497-0170</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
-      <nav aria-label="Footer">
-        <a href="index.html#watch">The Bar</a>
-        <a href="index.html#events">Events</a>
-        <a href="menu.html">Menu</a>
-        <a href="index.html#visit">Visit</a>
-      </nav>
-      <p>&copy; 2026 Putters Bar &amp; Grill &middot; Verona, WI</p>
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
+          <p>Verona's home for game day. Great food, cold drinks, and the best seat in the house for every game. Est. 2026.</p>
+        </div>
+        <div>
+          <h4>The Clubhouse</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="menu.html">Food &amp; Drink</a></li>
+            <li><a href="specials.html">Specials &amp; Events</a></li>
+            <li><a href="contact.html">Location &amp; Hours</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Game Plan</h4>
+          <ul>
+            <li><a href="tel:+16084970170">(608) 497-0170</a></li>
+            <li><a href="contact.html">503 W Verona Ave, Suite 400</a></li>
+            <li><a href="contact.html">Verona, WI 53593</a></li>
+            <li><a href="contact.html">Book a Table</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Putters Bar &amp; Grill &middot; Verona, WI</p>
+        <p>EST. 2026 &middot; FORMERLY THE BOGEY FACTORY</p>
+      </div>
     </div>
   </footer>
 

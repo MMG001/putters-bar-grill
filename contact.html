@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Location | Putters Bar &amp; Grill — Verona, WI</title>
+  <meta name="description" content="Find Putters Bar &amp; Grill at 503 W Verona Ave, Verona, WI. Hours, directions, bookings, and contact.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,700;0,800;1,800&family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <div class="ticker__group">
+        <span class="ticker__item"><span class="ticker__dot"></span>NOW PLAYING AS PUTTERS BAR &amp; GRILL</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">NEW MENU: COMING SOON</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">YOUR HOME FOR GAME DAY</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">FULL BAR &middot; SCRATCH KITCHEN &middot; PATIO</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">503 W VERONA AVE &middot; VERONA, WI</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">CALL (608) 497-0170</span>
+        <span class="ticker__sep"></span>
+      </div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Putters Bar &amp; Grill home">
+        <img src="assets/logo.png" alt="Putters Bar &amp; Grill logo">
+        <span>Putters Bar &amp; Grill</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">MENU</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="specials.html">Specials</a>
+        <a href="contact.html" class="is-active">Contact</a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Book a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--photo" style="background-image:url('assets/img/hero-crowd.jpg');">
+      <div class="page-hero__scrim"></div>
+      <div class="container">
+        <span class="chip"><span class="ticker__dot ticker__dot--live"></span> Get in Touch</span>
+        <h1>Find the <em>clubhouse</em></h1>
+        <p class="lede">Book a table, plan a party, or just ask what's on tap tonight.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="visit">
+          <div>
+            <div class="info-card">
+              <span class="kicker">&#128205; Find Us</span>
+              <h3>The Clubhouse</h3>
+              <address>503 W Verona Ave, Suite 400<br>Verona, WI 53593</address>
+              <small>Formerly The Bogey Factory</small>
+              <small><a href="tel:+16084970170">&#128222; (608) 497-0170</a></small>
+            </div>
+            <div class="info-card">
+              <span class="kicker">&#128337; Game Time</span>
+              <h3>Hours of Operation</h3>
+              <ul class="hours">
+                <li><span>Monday</span><span class="dots"></span><span>4:00 PM &ndash; 10:00 PM</span></li>
+                <li><span>Tuesday &ndash; Friday</span><span class="dots"></span><span>10:00 AM &ndash; 10:00 PM</span></li>
+                <li><span>Saturday &ndash; Sunday</span><span class="dots"></span><span>Call for hours</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-panel">
+            <h2>Send a play-by-play</h2>
+            <p>Question, booking, or private event? Fill this out and hit send &mdash; it opens a pre-written email in your mail app.</p>
+            <form id="contactForm">
+              <div class="field-row">
+                <div class="field">
+                  <label for="cfName">Name</label>
+                  <input id="cfName" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="cfEmail">Email</label>
+                  <input id="cfEmail" name="email" type="email" autocomplete="email" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="cfType">Inquiry Type</label>
+                <select id="cfType" name="type">
+                  <option>General Inquiry</option>
+                  <option>Table Booking</option>
+                  <option>Private Event / Party</option>
+                  <option>Feedback</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="cfMsg">Message</label>
+                <textarea id="cfMsg" name="message" placeholder="How can we help?" required></textarea>
+              </div>
+              <button class="btn btn--primary" type="submit">Send Message</button>
+              <p class="form-note">Prefer the phone? Call <a href="tel:+16084970170">(608) 497-0170</a> &mdash; fastest way to book on game day.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight reveal">
+      <div class="container">
+        <div class="map-frame">
+          <iframe
+            title="Map to Putters Bar & Grill, 503 W Verona Ave, Verona, WI"
+            src="https://www.google.com/maps?q=503+W+Verona+Ave+Suite+400,+Verona,+WI+53593&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
+          <p>Verona's home for game day. Great food, cold drinks, and the best seat in the house for every game. Est. 2026.</p>
+        </div>
+        <div>
+          <h4>The Clubhouse</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="menu.html">Food &amp; Drink</a></li>
+            <li><a href="specials.html">Specials &amp; Events</a></li>
+            <li><a href="contact.html">Location &amp; Hours</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Game Plan</h4>
+          <ul>
+            <li><a href="tel:+16084970170">(608) 497-0170</a></li>
+            <li><a href="contact.html">503 W Verona Ave, Suite 400</a></li>
+            <li><a href="contact.html">Verona, WI 53593</a></li>
+            <li><a href="contact.html">Book a Table</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Putters Bar &amp; Grill &middot; Verona, WI</p>
+        <p>EST. 2026 &middot; FORMERLY THE BOGEY FACTORY</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

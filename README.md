@@ -2,13 +2,20 @@
 
 Website for **Putters Bar & Grill** (formerly The Bogey Factory) — 503 W Verona Ave, Suite 400, Verona, WI 53593.
 
-A game-day sports bar. Dark "Stadium Prime Green" theme. Menu coming soon.
+A game-day sports bar. "Champion's Reserve" theme (Modern-Athletic, dark forest green + Action Green). Menu coming soon.
 
-## Structure
-- `index.html` — home page (bar, events, visit info)
-- `menu.html` — menu coming-soon page
+## Pages
+- `index.html` — home (hero, live now, daily specials, reviews)
+- `about.html` — story, mission, atmosphere
+- `menu.html` — coming-soon flipboard + sample sneak-peek gallery
+- `specials.html` — weekly lineup & private events
+- `contact.html` — info, hours, contact form (mailto), map
+
+## Shared
 - `css/style.css` — all styles
-- `js/main.js` — nav, ticker, flipboard, scroll reveal
-- `assets/` — logo & favicon
+- `js/main.js` — nav, ticker, flipboard, reveal, parallax, contact form
+- `assets/` — logo, favicon, photos (`assets/img`, `assets/img/menu`)
 
-Static site — deployable on GitHub Pages (Settings → Pages → main branch, / root).
+Things marked `<!-- EDIT -->` or "Sample" are placeholders — update with real games, reviews, events, prices, and the bar's email (in `js/main.js`).
+
+Static site — GitHub Pages: Settings → Pages → main branch, / root.

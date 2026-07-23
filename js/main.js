@@ -95,3 +95,23 @@
   }, { passive: true });
   update();
 })();
+
+// Contact form -> compose email (static site, no backend)
+(function () {
+  var form = document.getElementById("contactForm");
+  if (!form) return;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    // EDIT: change to the bar's real email address
+    var to = "info@puttersbargrill.com";
+    var name = document.getElementById("cfName").value.trim();
+    var email = document.getElementById("cfEmail").value.trim();
+    var type = document.getElementById("cfType").value;
+    var msg = document.getElementById("cfMsg").value.trim();
+    var subject = "[" + type + "] Website message from " + name;
+    var body = msg + "\n\n— " + name + "\n" + email;
+    window.location.href = "mailto:" + to +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  });
+})();

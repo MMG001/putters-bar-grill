@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Putters Bar &amp; Grill — Sports Bar | Verona, WI</title>
-  <meta name="description" content="Putters Bar &amp; Grill in Verona, WI — your home for game day. Wall-to-wall screens, cold drinks, and a scratch kitchen. New menu coming soon.">
+  <meta name="description" content="Putters Bar &amp; Grill in Verona, WI — where every game is a major. Wall-to-wall screens, cold drinks, and a scratch kitchen. New menu coming soon.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,700;0,800;1,800&family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Live ticker -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker__track" id="tickerTrack">
       <div class="ticker__group">
@@ -32,37 +30,35 @@
       </div>
     </div>
   </div>
-
-  <!-- Header -->
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Putters Bar &amp; Grill home">
         <img src="assets/logo.png" alt="Putters Bar &amp; Grill logo">
-        <span>Putters</span>
+        <span>Putters Bar &amp; Grill</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">MENU</button>
       <nav class="nav" id="mainNav" aria-label="Main navigation">
-        <a href="#watch" class="is-active">The Bar</a>
-        <a href="#events">Events</a>
+        <a href="index.html" class="is-active">Home</a>
+        <a href="about.html">About</a>
         <a href="menu.html">Menu</a>
-        <a href="#visit">Visit Us</a>
-        <a class="btn btn--primary btn--sm" href="tel:+16084970170">Book a Table</a>
+        <a href="specials.html">Specials</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Book a Table</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="hero__bg" id="heroBg" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div>
-          <span class="eyebrow"><span class="ticker__dot"></span> Est. 2026 &middot; Verona, Wisconsin</span>
-          <h1>Every game.<br>Every season.<br><em>Every fan.</em></h1>
-          <p class="lede">Putters Bar &amp; Grill is Verona's home for game day — wall-to-wall screens, cold taps, and a kitchen that takes bar food seriously. Grab a seat, the game's about to start.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="tel:+16084970170">Book a Table</a>
-            <a class="btn btn--ghost" href="menu.html">Peek the Menu</a>
+          <span class="chip chip--live"><span class="ticker__dot ticker__dot--live"></span> Est. 2026 &middot; Verona, Wisconsin</span>
+          <h1>Where every game<br>is a <em>major</em></h1>
+          <p class="lede">Wall-to-wall screens, cold taps, and a kitchen that takes bar food seriously. Grab a seat — the game's about to start.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="contact.html">Book a Table</a>
+            <a class="btn btn--outline" href="menu.html">View Menu</a>
           </div>
         </div>
         <div class="hero__logo">
@@ -71,150 +67,144 @@
       </div>
     </section>
 
-    <!-- Menu coming soon scoreboard -->
-    <section class="scoreboard-section reveal" id="menu">
+    <section class="section reveal">
       <div class="container">
-        <div class="scoreboard">
-          <p class="scoreboard__label">&#9679; Kitchen Scoreboard &#9679;</p>
-          <div class="flipboard" id="flipboard" aria-label="Menu coming soon">
-            <!-- tiles injected by JS -->
+        <div class="live-grid">
+          <div>
+            <div class="panel-title">
+              <h2><span class="ticker__dot ticker__dot--live"></span> Live Now</h2>
+              <a class="label" href="specials.html">View Full Schedule</a>
+            </div>
+            <!-- EDIT: swap in this week's real games -->
+            <div class="game-row">
+              <div class="game-row__icon">&#127944;</div>
+              <div class="game-row__body">
+                <div class="game-row__league">NFL &middot; Sunday</div>
+                <div class="game-row__title">Packers Game Day</div>
+              </div>
+              <div class="game-row__meta">SOUND ON<br>EVERY SCREEN</div>
+            </div>
+            <div class="game-row">
+              <div class="game-row__icon">&#127936;</div>
+              <div class="game-row__body">
+                <div class="game-row__league">College &middot; Saturday</div>
+                <div class="game-row__title">Badger Saturdays</div>
+              </div>
+              <div class="game-row__meta">DRINK SPECIALS<br>ALL GAME</div>
+            </div>
+            <div class="game-row">
+              <div class="game-row__icon">&#9918;</div>
+              <div class="game-row__body">
+                <div class="game-row__league">MLB &middot; All Season</div>
+                <div class="game-row__title">Brewers Every Night</div>
+              </div>
+              <div class="game-row__meta">FIRST PITCH<br>TO LAST OUT</div>
+            </div>
           </div>
-          <p class="scoreboard__note">Our new game-day menu is in the final round of taste testing. Scratch-kitchen favorites, shareables, and drink specials are on the way.</p>
-          <a class="btn btn--ghost" href="menu.html">See What's Cooking</a>
+          <aside class="specials-panel">
+            <span class="tag">Sneak Peek</span>
+            <div class="panel-title"><h2>Daily Specials</h2></div>
+            <div class="price-row"><h3>Brisket Stack</h3><span class="dots"></span><span class="price">$15.99</span></div>
+            <p class="price-desc">Slow-smoked brisket on brioche with melted cheese, crispy onions, and sweet BBQ drizzle.</p>
+            <div class="price-row"><h3>Loaded Cheese Fries</h3><span class="dots"></span><span class="price">$9.99</span></div>
+            <p class="price-desc">Hand-cut fries, beer cheese, crispy bacon, green onions. Built for sharing.</p>
+            <a class="btn btn--outline" href="menu.html">View Full Menu</a>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- The bar -->
-    <section class="section reveal" id="watch">
+    <section class="section reveal">
       <div class="container">
-        <div class="section__split">
-          <div class="section__head">
+        <div class="split">
+          <div class="section__head" style="margin-bottom:0;">
             <span class="kicker">The Bar</span>
             <h2>Built for game day</h2>
-            <p>Whether it's the Packers, the Badgers, or a Sunday major, there isn't a bad seat in the house.</p>
+            <p>Whether it's the Packers, the Badgers, or a Sunday major, there isn't a bad seat in the house. Big screens everywhere, a full bar, a scratch kitchen, and a patio for the warm nights.</p>
+            <div class="stats">
+              <div class="stat"><b>ALL</b><span>The Big Games</span></div>
+              <div class="stat"><b>FULL</b><span>Bar &amp; Cold Taps</span></div>
+              <div class="stat"><b>100%</b><span>Scratch Kitchen</span></div>
+            </div>
           </div>
           <div class="photo-frame">
             <img src="assets/img/fans-cheering.jpg" alt="Fans cheering with drinks at the bar during a game" loading="lazy">
           </div>
         </div>
-        <div class="grid">
-          <article class="card">
-            <div class="card__icon">&#128250;</div>
-            <h3>Wall-to-Wall Screens</h3>
-            <p>Big screens throughout the bar so you never miss a snap, pitch, or putt — sound on for the big ones.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#127866;</div>
-            <h3>Full Bar</h3>
-            <p>Cold taps, Wisconsin favorites, and cocktails poured right, from first tee time to last call.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#127831;</div>
-            <h3>Scratch Kitchen</h3>
-            <p>Burgers, curds, and shareables made in-house. The new Putters menu drops soon.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#9728;&#65039;</div>
-            <h3>Outdoor Patio</h3>
-            <p>A spacious patio for warm nights, cold drinks, and post-round debriefs.</p>
-          </article>
-        </div>
       </div>
     </section>
 
-    <!-- Events -->
-    <section class="section reveal" id="events">
+    <section class="section reveal">
       <div class="container">
         <div class="section__head">
-          <span class="kicker">The Lineup</span>
-          <h2>There's always a game on</h2>
-          <p>Football Sundays, Badger Saturdays, fight nights, and everything in between — if it's on, it's on here.</p>
+          <span class="kicker">What the Regulars Say</span>
+          <h2>Word around the bar</h2>
         </div>
         <div class="grid">
-          <article class="card">
-            <div class="card__icon">&#127944;</div>
-            <h3>Watch Parties</h3>
-            <p>Packers, Badgers, Brewers, Bucks — sound on for the big games, drink specials to match.</p>
+          <!-- EDIT: replace with real customer reviews -->
+          <article class="quote-card">
+            <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"Best atmosphere in town for a Packers game. The sound is on, the food is fast, and everyone's into it."</blockquote>
+            <cite>&mdash; Sample Review</cite>
           </article>
-          <article class="card">
-            <div class="card__icon">&#127919;</div>
-            <h3>Trivia &amp; Game Nights</h3>
-            <p>Weeknight trivia, darts, and friendly competition. Call or stop in for this week's lineup.</p>
+          <article class="quote-card">
+            <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"Came for the drinks, stayed for the wings. Perfect balance of high-energy sports bar and cozy neighborhood spot."</blockquote>
+            <cite>&mdash; Sample Review</cite>
           </article>
-          <article class="card">
-            <div class="card__icon">&#127881;</div>
-            <h3>Private Parties</h3>
-            <p>Birthdays, watch parties, work outings — reserve your space and we'll handle the rest.</p>
+          <article class="quote-card">
+            <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"Big screens, cold beer, and a patio in the summer. This is our new game day headquarters."</blockquote>
+            <cite>&mdash; Sample Review</cite>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CTA band -->
     <section class="cta-band reveal">
       <div class="container">
-        <h2>Leagues &middot; Parties &middot; Corporate Events</h2>
-        <p>Rent a bay, a room, or the whole house. We'll handle the food, the screens, and the scorekeeping.</p>
-        <a class="btn btn--primary" href="tel:+16084970170">Call (608) 497-0170</a>
-      </div>
-    </section>
-
-    <!-- Visit -->
-    <section class="section reveal" id="visit">
-      <div class="container">
-        <div class="section__head">
-          <span class="kicker">Visit Us</span>
-          <h2>Find the clubhouse</h2>
-        </div>
-        <div class="visit">
-          <div class="visit__info">
-            <dl>
-              <div>
-                <dt>Address</dt>
-                <dd>503 W Verona Ave, Suite 400<br>Verona, WI 53593
-                  <small>Formerly The Bogey Factory</small>
-                </dd>
-              </div>
-              <div>
-                <dt>Phone</dt>
-                <dd><a href="tel:+16084970170">(608) 497-0170</a></dd>
-              </div>
-              <div>
-                <dt>Hours</dt>
-                <dd>
-                  <ul class="hours">
-                    <li><span>Monday</span><span>4:00 PM &ndash; 10:00 PM</span></li>
-                    <li><span>Tuesday &ndash; Friday</span><span>10:00 AM &ndash; 10:00 PM</span></li>
-                    <li><span>Saturday &ndash; Sunday</span><span>Call for hours</span></li>
-                  </ul>
-                </dd>
-              </div>
-            </dl>
-          </div>
-          <div class="map-frame">
-            <iframe
-              title="Map to Putters Bar & Grill, 503 W Verona Ave, Verona, WI"
-              src="https://www.google.com/maps?q=503+W+Verona+Ave+Suite+400,+Verona,+WI+53593&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen></iframe>
-          </div>
+        <span class="kicker">Visit Us</span>
+        <h2>503 W Verona Ave &middot; Verona, WI</h2>
+        <p>Suite 400 &middot; Formerly The Bogey Factory &middot; (608) 497-0170</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn--primary" href="contact.html">Get Directions &amp; Hours</a>
+          <a class="btn btn--outline" href="tel:+16084970170">Call the Bar</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
-      <nav aria-label="Footer">
-        <a href="#watch">The Bar</a>
-        <a href="#events">Events</a>
-        <a href="menu.html">Menu</a>
-        <a href="#visit">Visit</a>
-      </nav>
-      <p>&copy; 2026 Putters Bar &amp; Grill &middot; Verona, WI</p>
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
+          <p>Verona's home for game day. Great food, cold drinks, and the best seat in the house for every game. Est. 2026.</p>
+        </div>
+        <div>
+          <h4>The Clubhouse</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="menu.html">Food &amp; Drink</a></li>
+            <li><a href="specials.html">Specials &amp; Events</a></li>
+            <li><a href="contact.html">Location &amp; Hours</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Game Plan</h4>
+          <ul>
+            <li><a href="tel:+16084970170">(608) 497-0170</a></li>
+            <li><a href="contact.html">503 W Verona Ave, Suite 400</a></li>
+            <li><a href="contact.html">Verona, WI 53593</a></li>
+            <li><a href="contact.html">Book a Table</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Putters Bar &amp; Grill &middot; Verona, WI</p>
+        <p>EST. 2026 &middot; FORMERLY THE BOGEY FACTORY</p>
+      </div>
     </div>
   </footer>
 
