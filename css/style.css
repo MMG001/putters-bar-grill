@@ -489,7 +489,7 @@ h2 em { font-style: italic; color: var(--primary); }
 
 .site-footer__legal {
   border-top: 1px solid var(--outline-variant);
-  margin-top: 20px; padding-top: 20px;
+  padding-top: 24px;
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
 }
 .site-footer__legal p, .site-footer__legal nav a {
