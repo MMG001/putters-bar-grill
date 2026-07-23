@@ -148,7 +148,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: var(--surface-lowest);
 }
 .page-hero--photo { background-position: center; background-size: cover; }
-.page-hero__scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6); }
+.page-hero__scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.7); }
 .page-hero .container { position: relative; z-index: 1; }
 .chip {
   display: inline-flex; align-items: center; gap: 8px;
@@ -184,7 +184,7 @@ h1 em, .h1 em { font-style: italic; color: var(--primary); }
 .hero__bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(127, 218, 139, 0.12), transparent 60%);
 }
 .hero__inner {
@@ -416,7 +416,7 @@ h2 em { font-style: italic; color: var(--primary); }
   padding: 96px 0; text-align: center;
   border-bottom: 1px solid var(--outline-variant);
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../assets/img/cta-fans.jpg") center 30% / cover no-repeat,
     var(--surface-lowest);
 }
