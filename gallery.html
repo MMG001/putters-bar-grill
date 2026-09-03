@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — The Putters Archive | Putters Bar &amp; Grill</title>
+  <meta name="description" content="Photos of Putters Bar &amp; Grill in Verona, WI — the dining room, TrackMan golf simulator bays, and the plates coming out of the scratch kitchen.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,700;0,800;1,800&family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <div class="ticker__group">
+        <span class="ticker__item"><span class="ticker__dot"></span>NOW PLAYING AS PUTTERS BAR &amp; GRILL</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">SCRATCH KITCHEN: NOW SERVING</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">YOUR HOME FOR GAME DAY</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">FULL BAR &middot; SCRATCH KITCHEN &middot; PATIO</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item ticker__item--accent">503 W VERONA AVE &middot; VERONA, WI</span>
+        <span class="ticker__sep"></span>
+        <span class="ticker__item">CALL (608) 497-0170</span>
+        <span class="ticker__sep"></span>
+      </div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Putters Bar &amp; Grill home">
+        <img src="assets/logo.png" alt="Putters Bar &amp; Grill logo">
+        <span>Putters Bar &amp; Grill</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">MENU</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="specials.html">Specials</a>
+        <a href="gallery.html" class="is-active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Book a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--photo" style="background-image:url('assets/img/gallery/entrees-hero.jpg');">
+      <div class="page-hero__scrim"></div>
+      <div class="container">
+        <span class="chip chip--live"><span class="ticker__dot ticker__dot--live"></span> Fresh From the Kitchen</span>
+        <h1>The Putters <em>archive</em></h1>
+        <p class="lede">Every corner of the clubhouse, every plate that leaves the pass. Straight from Verona.</p>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Gallery sections">
+          <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="tab-plate">The Plate</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-interior">The Interior</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-exterior">The Exterior</button>
+        </div>
+
+        <!-- ============ CHAPTER 01 · THE PLATE ============ -->
+        <div class="tab-panel is-active" id="tab-plate" role="tabpanel">
+          <div class="section__head" style="text-align:center; margin-inline:auto;">
+            <span class="kicker">Chapter 01</span>
+            <h2>The <em>plate</em></h2>
+            <p class="tab-panel__intro" style="margin-inline:auto;">Every wing, every burger, every plate that hits the table &mdash; built in the scratch kitchen.</p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/gallery/entrees.jpg" alt="Spread of pizzas, wraps, sandwiches, a burger, and shareables on the table at Putters" loading="lazy">
+              <figcaption><span>The Full Spread</span><span class="gallery-item__ic">&#127860;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/buffalo-wings.jpg" alt="Buffalo chicken wings with celery sticks" loading="lazy">
+              <figcaption><span>Buffalo Wings</span><span class="gallery-item__ic">&#128293;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/dry-rub-wings.jpg" alt="Dry rub chicken wings with a basket of house chips" loading="lazy">
+              <figcaption><span>Dry Rub Wings</span><span class="gallery-item__ic">&#127831;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/bacon-burger.jpg" alt="Bacon cheeseburger topped with crispy onions, served with tater tots" loading="lazy">
+              <figcaption><span>The Clubhouse Burger</span><span class="gallery-item__ic">&#127828;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/uptown-burger.jpg" alt="Smash burger stacked with cheese and toppings" loading="lazy">
+              <figcaption><span>Smash Burger</span><span class="gallery-item__ic">&#127828;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/brisket-sandwich.jpg" alt="BBQ brisket sandwich with melted cheese and crispy onions, served with house chips" loading="lazy">
+              <figcaption><span>Brisket Stack</span><span class="gallery-item__ic">&#129386;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/chicken-sandwich.jpg" alt="Crispy fried chicken sandwich with cheese and salsa, served with chips and a pickle" loading="lazy">
+              <figcaption><span>Crispy Chicken Sandwich</span><span class="gallery-item__ic">&#129386;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/brisket-wrap.jpg" alt="Brisket wrap halves with greens, served with house chips" loading="lazy">
+              <figcaption><span>Smokehouse Brisket Wrap</span><span class="gallery-item__ic">&#127790;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/buffalo-wrap.jpg" alt="Buffalo chicken wrap with lettuce and tomato, served with chips" loading="lazy">
+              <figcaption><span>Buffalo Chicken Wrap</span><span class="gallery-item__ic">&#127790;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/chicken-tacos.jpg" alt="Chicken tacos topped with corn salsa" loading="lazy">
+              <figcaption><span>Chicken Tacos</span><span class="gallery-item__ic">&#127790;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/shrimp-tacos.jpg" alt="Shrimp tacos topped with corn salsa" loading="lazy">
+              <figcaption><span>Shrimp Tacos</span><span class="gallery-item__ic">&#129424;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/menu/cheese-fries.jpg" alt="Loaded cheese fries" loading="lazy">
+              <figcaption><span>Loaded Cheese Fries</span><span class="gallery-item__ic">&#127839;</span></figcaption>
+            </figure>
+          </div>
+          <div class="hero-actions" style="justify-content:center; margin-top:40px;">
+            <a class="btn btn--primary" href="menu.html">See the Full Menu</a>
+          </div>
+        </div>
+
+        <!-- ============ CHAPTER 02 · THE INTERIOR ============ -->
+        <div class="tab-panel" id="tab-interior" role="tabpanel">
+          <div class="section__head" style="text-align:center; margin-inline:auto;">
+            <span class="kicker">Chapter 02</span>
+            <h2>The <em>interior</em></h2>
+            <p class="tab-panel__intro" style="margin-inline:auto;">The neon, the brick, the big screens &mdash; and six TrackMan simulator bays waiting for your foursome.</p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/gallery/interior-01.jpg" alt="Putters neon sign and golf artwork on the brick wall above the dining room tables" loading="lazy">
+              <figcaption><span>The Gallery Wall</span><span class="gallery-item__ic">&#127912;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/gallery/interior-02.jpg" alt="View down the main bar with overhead TVs and garage-door windows" loading="lazy">
+              <figcaption><span>The Main Bar</span><span class="gallery-item__ic">&#127866;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/gallery/interior-03.jpg" alt="Bar seating with TVs overhead and natural light from the garage-door windows" loading="lazy">
+              <figcaption><span>Catch the Game</span><span class="gallery-item__ic">&#128250;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/gallery/sim-bay-01.jpg" alt="TrackMan golf simulator bay with bar-top seating at Putters" loading="lazy">
+              <figcaption><span>Simulator Bay</span><span class="gallery-item__ic">&#9971;</span></figcaption>
+            </figure>
+            <figure class="gallery-item" tabindex="0">
+              <img src="assets/img/gallery/sim-bay-02.jpg" alt="Golf simulator screen showing a fairway, with bay seating in the dining room" loading="lazy">
+              <figcaption><span>Tee It Up</span><span class="gallery-item__ic">&#127948;&#65039;</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- ============ CHAPTER 03 · THE EXTERIOR ============ -->
+        <div class="tab-panel" id="tab-exterior" role="tabpanel">
+          <div class="section__head" style="text-align:center; margin-inline:auto;">
+            <span class="kicker">Chapter 03</span>
+            <h2>The <em>exterior</em></h2>
+            <p class="tab-panel__intro" style="margin-inline:auto;">The storefront, the patio, and Verona nights &mdash; photos on the way.</p>
+          </div>
+          <!-- EDIT: replace this placeholder with exterior photos when available -->
+          <div class="gallery-empty">
+            <span class="gallery-empty__badge">&#128247;</span>
+            <h3>Photo shoot in progress</h3>
+            <p>Exterior and patio shots are coming soon. In the meantime, come see it in person.</p>
+            <a class="btn btn--outline" href="contact.html">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band reveal">
+      <div class="container">
+        <h2>Looks good, <em>tastes better</em></h2>
+        <p>Grab a table, book a bay, or bring the whole crew for game day.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn--primary" href="contact.html">Book a Table</a>
+          <a class="btn btn--outline" href="specials.html">See Events</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close photo viewer">&times;</button>
+    <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Previous photo">&#8592;</button>
+    <figure class="lightbox__stage">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="">
+      <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Next photo">&#8594;</button>
+    <span class="lightbox__count" id="lightboxCount"></span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="assets/logo.png" alt="Putters Bar &amp; Grill">
+          <p>Verona's home for game day. Great food, cold drinks, and the best seat in the house for every game. Est. 2026.</p>
+        </div>
+        <div>
+          <h4>The Clubhouse</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><span class="arr">&rarr;</span>Home</a></li>
+            <li><a href="about.html"><span class="arr">&rarr;</span>Our Story</a></li>
+            <li><a href="menu.html"><span class="arr">&rarr;</span>Food &amp; Drink</a></li>
+            <li><a href="specials.html"><span class="arr">&rarr;</span>Specials &amp; Events</a></li>
+            <li><a href="gallery.html"><span class="arr">&rarr;</span>Gallery</a></li>
+            <li><a href="contact.html"><span class="arr">&rarr;</span>Location &amp; Hours</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact">
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=503+W+Verona+Ave+Suite+400+Verona+WI+53593" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>503 W Verona Ave, Suite 400<br>Verona, WI 53593</span></a></li>
+            <li><a href="tel:+16084970170"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><span>(608) 497-0170</span></a></li>
+            <li><a href="mailto:info@puttersbargrill.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg><span>info@puttersbargrill.com</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <p>&copy; 2026 Putters Bar &amp; Grill. All Rights Reserved. &nbsp;&middot;&nbsp; Designed by <a href="https://mariswatchbar.com/#" target="_blank" rel="noopener">Multimediagraphics</a></p>
+        <nav aria-label="Legal">
+          <a href="sitemap.html">Sitemap</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="equal-opportunity.html">Equal Opportunity</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

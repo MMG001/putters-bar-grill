@@ -105,3 +105,74 @@
     });
   });
 })();
+
+// Gallery lightbox
+(function () {
+  var box = document.getElementById("lightbox");
+  if (!box) return;
+  var img = document.getElementById("lightboxImg");
+  var cap = document.getElementById("lightboxCaption");
+  var count = document.getElementById("lightboxCount");
+  var items = [];
+  var idx = 0;
+  var lastFocus = null;
+
+  function activeItems() {
+    var panel = document.querySelector(".tab-panel.is-active") || document;
+    return Array.prototype.slice.call(panel.querySelectorAll(".gallery-item"));
+  }
+
+  function show(i) {
+    items = activeItems();
+    if (!items.length) return;
+    idx = (i + items.length) % items.length;
+    var it = items[idx];
+    var pic = it.querySelector("img");
+    img.src = pic.currentSrc || pic.src;
+    img.alt = pic.alt || "";
+    var label = it.querySelector("figcaption span");
+    cap.textContent = label ? label.textContent : "";
+    count.textContent = (idx + 1) + " / " + items.length;
+  }
+
+  function open(i) {
+    lastFocus = document.activeElement;
+    show(i);
+    box.classList.add("is-open");
+    box.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    document.getElementById("lightboxClose").focus();
+  }
+
+  function close() {
+    box.classList.remove("is-open");
+    box.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    img.src = "";
+    if (lastFocus) lastFocus.focus();
+  }
+
+  document.addEventListener("click", function (e) {
+    var it = e.target.closest(".gallery-item");
+    if (it) open(activeItems().indexOf(it));
+  });
+  document.addEventListener("keydown", function (e) {
+    var it = e.target.closest && e.target.closest(".gallery-item");
+    if (it && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      open(activeItems().indexOf(it));
+    }
+  });
+
+  document.getElementById("lightboxClose").addEventListener("click", close);
+  document.getElementById("lightboxPrev").addEventListener("click", function () { show(idx - 1); });
+  document.getElementById("lightboxNext").addEventListener("click", function () { show(idx + 1); });
+  box.addEventListener("click", function (e) { if (e.target === box) close(); });
+
+  document.addEventListener("keydown", function (e) {
+    if (!box.classList.contains("is-open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(idx - 1);
+    if (e.key === "ArrowRight") show(idx + 1);
+  });
+})();
