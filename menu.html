@@ -50,12 +50,12 @@
   </header>
 
   <main>
-    <section class="page-hero page-hero--photo" style="background-image:url('assets/img/menu-hero.jpg');">
+    <section class="page-hero page-hero--photo" style="background-image:url('assets/img/gallery/entrees-hero.jpg');">
       <div class="page-hero__scrim"></div>
       <div class="container">
         <span class="chip chip--live"><span class="ticker__dot ticker__dot--live"></span> Live Kitchen: Open</span>
         <h1>The <em>playbook</em></h1>
-        <p class="lede">Championship flavors, drafted for the ultimate game day. Pick a category and explore the lineup.</p>
+        <p class="lede">Scratch kitchen, smoked in-house, sauced by hand. Pick a category and explore the lineup.</p>
         <div class="hero-actions">
           <a class="btn btn--primary" href="#food-menu">Browse the Menu</a>
           <a class="btn btn--outline" href="tel:+16084970170">Call for Today's Specials</a>
@@ -71,223 +71,257 @@
         </div>
 
         <div class="tabs" role="tablist" aria-label="Menu categories">
-          <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="tab-apps">Appetizers</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-bowls">Power Bowls</button>
+          <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="tab-wings">Wings</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-apps">Appetizers</button>
           <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-burgers">Burgers</button>
           <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-sandwiches">Sandwiches</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-wraps">Wraps</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-pizza">Pizza</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-flatbreads">Flatbreads</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-salads">Salads &amp; Wraps</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-kids">Kids &amp; More</button>
         </div>
 
-        <div class="tab-panel is-active" id="tab-apps" role="tabpanel">
-          <p class="tab-panel__intro">Shareables to get the game moving &mdash; wings, curds, and loaded fries.</p>
+        <!-- WINGS -->
+        <div class="tab-panel is-active" id="tab-wings" role="tabpanel">
+          <p class="tab-panel__intro">Tossed to order in one of our homemade sauces: BBQ, Honey BBQ, Buffalo, Garlic Parmesan, Bang Bang, Teriyaki, Bourbon, Nashville Hot, Honey Hot, or Spicy Bacon Ranch.</p>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-card__img"><img src="assets/img/gallery/wings-basket.jpg" alt="Basket of saucy chicken wings with house-made ranch" loading="lazy"></div>
+              <div class="menu-card__body">
+                <div class="menu-card__row"><h3>Chicken Wings (10)</h3><span class="dots"></span><span class="menu-card__price">$15.99</span></div>
+                <p>Ten jumbo wings tossed in your choice of homemade sauce.</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <div class="menu-card__img"><img src="assets/img/gallery/boneless-bites.jpg" alt="Basket of crispy boneless wings with ranch" loading="lazy"></div>
+              <div class="menu-card__body">
+                <div class="menu-card__row"><h3>Boneless Wings</h3><span class="dots"></span><span class="menu-card__price">(6) $8.49 &middot; (12) $16.49</span></div>
+                <p>Crispy hand-breaded boneless wings, tossed in any of our homemade sauces.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- APPETIZERS -->
+        <div class="tab-panel" id="tab-apps" role="tabpanel">
+          <p class="tab-panel__intro">Shareables built for the table.</p>
           <div class="menu-grid" style="margin-bottom:36px;">
             <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/wings-basket.jpg" alt="Basket of saucy buffalo wings with house-made ranch" loading="lazy"></div>
+              <div class="menu-card__img"><img src="assets/img/gallery/cheese-curds.jpg" alt="Bowl of deep-fried Wisconsin cheddar cheese curds with ranch" loading="lazy"></div>
               <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Buffalo Chicken Wings</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
-                <p>Jumbo wings tossed in classic buffalo sauce, served with celery and house-made ranch or blue cheese.</p>
+                <div class="menu-card__row"><h3>Curds</h3><span class="dots"></span><span class="menu-card__price">$10.99</span></div>
+                <p>Deep-fried Wisconsin cheddar cheese curds served with our homemade ranch.</p>
               </div>
             </article>
             <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/cheese-curds.jpg" alt="Bowl of beer-battered Wisconsin cheese curds with ranch" loading="lazy"></div>
+              <div class="menu-card__img"><img src="assets/img/gallery/sliders.jpg" alt="Three sliders on Hawaiian buns with golf-themed picks" loading="lazy"></div>
               <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Cheese Curds</h3><span class="dots"></span><span class="menu-card__price">$9.99</span></div>
-                <p>Wisconsin white cheddar curds, beer-battered and fried golden. Served with house-made ranch.</p>
+                <div class="menu-card__row"><h3>Sliders (3)</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
+                <p>Your choice of Angus beef, pork, or brisket on Hawaiian buns. Add cheese or bacon +$1.</p>
               </div>
             </article>
             <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/nachos.jpg" alt="Sheet tray of loaded nachos with jalape&ntilde;os, pico, and crema, with salsa and sour cream" loading="lazy"></div>
+              <div class="menu-card__img"><img src="assets/img/gallery/nachos.jpg" alt="Tray of loaded nachos with toppings, salsa, and sour cream" loading="lazy"></div>
               <div class="menu-card__body">
                 <div class="menu-card__row"><h3>Loaded Nachos</h3><span class="dots"></span><span class="menu-card__price">$13.99</span></div>
-                <p>A full tray of chips piled with jalape&ntilde;os, pico de gallo, melted cheese, and avocado crema. Salsa and sour cream on the side.</p>
-              </div>
-            </article>
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/boneless-bites.jpg" alt="Basket of crispy boneless chicken bites with ranch" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Boneless Wings</h3><span class="dots"></span><span class="menu-card__price">$11.99</span></div>
-                <p>Crispy hand-breaded boneless bites, plain or tossed in any of our wing sauces. Served with ranch or blue cheese.</p>
-              </div>
-            </article>
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/apps-baskets.jpg" alt="Sampler baskets of saucy wings, boneless bites, cheese curds, and cheeseburger sliders" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>The Putters Sampler</h3><span class="dots"></span><span class="menu-card__price">$18.99</span></div>
-                <p>Built for the table &mdash; wings, boneless bites, cheese curds, and cheeseburger sliders in one lineup.</p>
+                <p>Tortilla chips, queso, melted shredded cheese, diced tomatoes, lettuce, and black olives, with sour cream and salsa on the side. Add chicken, beef, pulled pork, or brisket +$2.</p>
               </div>
             </article>
           </div>
           <div class="menu-list">
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Dry Rub Wings</h3><span class="dots"></span><span class="price">$12.99</span></div>
-              <p class="price-desc">Crispy jumbo wings dusted in our signature smoky dry rub, served with seasoned house chips.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Brisket Deviled Eggs</h3><span class="dots"></span><span class="price">$10.99</span></div>
+              <p class="price-desc">Four halves topped with smoked brisket and a hot honey drizzle.</p>
             </div>
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Putters Cheese Fries</h3><span class="dots"></span><span class="price">$10.99</span></div>
-              <p class="price-desc">Hand-cut fries smothered in beer cheese, topped with crispy bacon and green onions. Built for sharing &mdash; or not.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Quesadilla</h3><span class="dots"></span><span class="price">$10.99</span></div>
+              <p class="price-desc">Melted cheese, lettuce, pico de gallo, sour cream, and salsa. Add chicken, pulled pork, or brisket +$2.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Pretzel Bites</h3><span class="dots"></span><span class="price">$12.99</span></div>
+              <p class="price-desc">Warm, salty pretzel bites served with queso and spicy mustard.</p>
             </div>
             <div class="menu-list__item">
               <div class="price-row" style="margin-top:0;"><h3>Fried Pickles</h3><span class="dots"></span><span class="price">$10.99</span></div>
-              <p class="price-desc">Crispy dill pickle chips fried to a crunch, with ranch for dunking.</p>
+              <p class="price-desc">Crispy fried pickles served with our homemade chipotle ranch.</p>
             </div>
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Fried Brussels Sprouts</h3><span class="dots"></span><span class="price">$11.99</span></div>
-              <p class="price-desc">Flash-fried crispy sprouts finished with a sweet balsamic glaze.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Chips &amp; Salsa</h3><span class="dots"></span><span class="price">$8.49</span></div>
+              <p class="price-desc">Fresh tortilla chips with salsa. Add queso +$2.</p>
             </div>
           </div>
         </div>
 
-        <div class="tab-panel" id="tab-bowls" role="tabpanel">
-          <p class="tab-panel__intro"><span class="chip" style="margin:0 12px 0 0;">New &amp; Popular</span> Our signature healthy bowls and salads &mdash; already a customer favorite.</p>
+        <!-- BURGERS -->
+        <div class="tab-panel" id="tab-burgers" role="tabpanel">
+          <p class="tab-panel__intro">Every burger is two 1/4 lb smash patties, served with your choice of kettle chips, fries, or tater tots (sweet potato fries +$2). Add a cup of soup +$2 or side salad +$3.</p>
+          <div class="menu-grid" style="margin-bottom:36px;">
+            <article class="menu-card">
+              <div class="menu-card__img"><img src="assets/img/gallery/burger-basket.jpg" alt="Double smash burger in a basket with seasoned fries" loading="lazy"></div>
+              <div class="menu-card__body">
+                <div class="menu-card__row"><h3>Bogey Burger</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
+                <p>Two 1/4 lb smash patties topped with lettuce, onion, and pickles. Add American, cheddar, pepper jack, provolone, or Swiss +$1. Add bacon +$1.</p>
+              </div>
+            </article>
+          </div>
+          <div class="menu-list">
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Shroom &amp; Swiss</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Two smash patties with saut&eacute;ed mushrooms and Swiss cheese.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Eggy</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Two smash patties with melted provolone, a fried egg, crispy bacon, and crunchy onions.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Western</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Two smash patties with fried onions, crispy bacon, and our homemade BBQ sauce.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Bacon Jalape&ntilde;o</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Two smash patties with crispy fried jalape&ntilde;os, crispy bacon, melted pepper jack, and fresh lettuce.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SANDWICHES -->
+        <div class="tab-panel" id="tab-sandwiches" role="tabpanel">
+          <p class="tab-panel__intro">Served with your choice of kettle chips, fries, or tater tots (sweet potato fries +$2). Add a cup of soup +$2 or side salad +$3.</p>
+          <div class="menu-grid" style="margin-bottom:36px;">
+            <article class="menu-card">
+              <div class="menu-card__img"><img src="assets/img/gallery/brisket-grilled-cheese.jpg" alt="Brisket grilled cheese on Texas toast in a basket with kettle chips" loading="lazy"></div>
+              <div class="menu-card__body">
+                <div class="menu-card__row"><h3>Brisket Grilled Cheese</h3><span class="dots"></span><span class="menu-card__price">$14.99</span></div>
+                <p>Shredded smoked brisket smothered in our homemade BBQ sauce, piled on Texas toast with melted cheddar cheese.</p>
+              </div>
+            </article>
+          </div>
+          <div class="menu-list">
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Chicken Sandwich</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Battered or grilled chicken with any of our homemade sauces (or plain), topped with lettuce, onions, and pickles. Add cheese +$1, bacon +$1.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Pulled Pork</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Slow-roasted pulled pork with our homemade BBQ sauce, topped with fried onions, chipotle ranch, and coleslaw.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>BLT</h3><span class="dots"></span><span class="price">$11.99</span></div>
+              <p class="price-desc">Bacon, lettuce, tomato, and mayo on grilled Texas toast. Add cheese +$1.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLATBREADS -->
+        <div class="tab-panel" id="tab-flatbreads" role="tabpanel">
+          <p class="tab-panel__intro">Hand-stretched flatbreads, perfect for the table.</p>
+          <div class="menu-grid" style="margin-bottom:36px;">
+            <article class="menu-card">
+              <div class="menu-card__img"><img src="assets/img/gallery/pepperoni-pizza.jpg" alt="Pepperoni flatbread on a wood board" loading="lazy"></div>
+              <div class="menu-card__body">
+                <div class="menu-card__row"><h3>Hot Honey Pepperoni</h3><span class="dots"></span><span class="menu-card__price">$12.95</span></div>
+                <p>Pizza sauce base, pepperoni, and a sticky hot honey drizzle.</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <div class="menu-card__img"><img src="assets/img/gallery/flatbread.jpg" alt="Supreme flatbread with olives, onions, pepperoni, and sausage" loading="lazy"></div>
+              <div class="menu-card__body">
+                <div class="menu-card__row"><h3>Supreme</h3><span class="dots"></span><span class="menu-card__price">$14.75</span></div>
+                <p>Pizza sauce base with black olives, onions, mushrooms, pepperoni, and sausage.</p>
+              </div>
+            </article>
+          </div>
+          <div class="menu-list">
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Cheese</h3><span class="dots"></span><span class="price">$11.75</span></div>
+              <p class="price-desc">Add'l toppings +$1 each: bacon, black olives, Canadian bacon, mushrooms, onions, pepperoni, sausage, tomatoes, fresh jalape&ntilde;os.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Buffalo Chicken</h3><span class="dots"></span><span class="price">$14.75</span></div>
+              <p class="price-desc">Spicy bacon ranch sauce, grilled buffalo chicken, topped with bacon crumbles, onions, and a ranch drizzle.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Meat Lovers</h3><span class="dots"></span><span class="price">$14.75</span></div>
+              <p class="price-desc">Pizza sauce base with bacon crumbles, Canadian bacon, pepperoni, and sausage.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>BBQ Chicken</h3><span class="dots"></span><span class="price">$14.75</span></div>
+              <p class="price-desc">Homemade BBQ sauce base with grilled BBQ chicken and onions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SALADS & WRAPS -->
+        <div class="tab-panel" id="tab-salads" role="tabpanel">
+          <p class="tab-panel__intro">Wraps are served with your choice of kettle chips, fries, or tater tots (sweet potato fries +$2).</p>
           <div class="menu-grid" style="margin-bottom:36px;">
             <article class="menu-card">
               <div class="menu-card__img"><img src="assets/img/gallery/caesar-salad.jpg" alt="Chicken Caesar salad with shaved parmesan and croutons" loading="lazy"></div>
               <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Chicken Caesar Salad</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
-                <p>Grilled chicken over crisp romaine with shaved parmesan, seasoned croutons, and creamy Caesar dressing.</p>
+                <div class="menu-card__row"><h3>Chicken Caesar</h3><span class="dots"></span><span class="menu-card__price">$14.99</span></div>
+                <p>Grilled, marinated chicken breast, crisp romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
               </div>
             </article>
           </div>
           <div class="menu-list">
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Chipotle Bowl</h3><span class="dots"></span><span class="price">$14.99</span></div>
-              <p class="price-desc">Rice &amp; fresh greens topped with grilled chicken, guacamole, tomatoes, peppers, black beans, and corn salsa. Finished with sriracha mayo.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Buffalo Chicken</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Fried or grilled chicken tossed in our homemade buffalo sauce, crisp romaine, shredded Monterey Jack, with our homemade ranch.</p>
             </div>
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Asian Bowl</h3><span class="dots"></span><span class="price">$14.99</span></div>
-              <p class="price-desc">Rice &amp; spring mix topped with broccoli, spinach, carrots, cucumber, and grilled chicken. Finished with our sweet Asian chili dressing.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Brisket</h3><span class="dots"></span><span class="price">$15.99</span></div>
+              <p class="price-desc">Shredded smoked brisket in our homemade BBQ sauce, lettuce, shredded cheddar, and onion straws.</p>
             </div>
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Mexican Bowl</h3><span class="dots"></span><span class="price">$14.99</span></div>
-              <p class="price-desc">Rice &amp; romaine topped with seasoned beef, black beans, red onion, avocado, corn, cheese, and peppers. Finished with chipotle ranch dressing.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Chicken Bacon Ranch</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Fried or grilled chicken, chopped bacon, diced tomatoes, crisp romaine, with our homemade ranch.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Taco</h3><span class="dots"></span><span class="price">$14.99</span></div>
+              <p class="price-desc">Beef or grilled chicken, crisp romaine, diced tomatoes, black olives, jalape&ntilde;os, shredded cheddar. Served with salsa, sour cream, and tortilla chips.</p>
             </div>
           </div>
         </div>
 
-        <div class="tab-panel" id="tab-burgers" role="tabpanel">
-          <p class="tab-panel__intro">Smash patties on toasted brioche, made to order from the scratch kitchen.</p>
-          <div class="menu-grid" style="margin-bottom:36px;">
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/burger-basket.jpg" alt="Bacon cheeseburger with lettuce, onion, and pickles, served with seasoned fries" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Putters Bacon Burger</h3><span class="dots"></span><span class="menu-card__price">$14.99</span></div>
-                <p>Smash patty stacked with applewood bacon, melted cheese, crispy onions, and a pickle on toasted brioche. Served with tots.</p>
-              </div>
-            </article>
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/sliders.jpg" alt="Three cheeseburger sliders on golf-themed picks in the Putters dining room" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Cheeseburger Sliders</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
-                <p>Three smash sliders with American cheese on toasted mini brioche, pinned with golf picks. Add a basket of fries for the full round.</p>
-              </div>
-            </article>
+        <!-- KIDS & MORE -->
+        <div class="tab-panel" id="tab-kids" role="tabpanel">
+          <p class="tab-panel__intro">Soups, the fish fry, and something for the shortest hitters in your group.</p>
+          <div class="menu-list" style="margin-bottom:36px;">
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Fish Fry</h3><span class="dots"></span><span class="price">&mdash;</span></div>
+              <p class="price-desc">Three hand-battered fish filets with tartar sauce and coleslaw, served with your choice of fries or tots. Sweet potato fries +$2.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Chili</h3><span class="dots"></span><span class="price">$4.99</span></div>
+              <p class="price-desc">Homemade and hearty. Cup it with any basket.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Soup of the Day</h3><span class="dots"></span><span class="price">$4.99</span></div>
+              <p class="price-desc">Ask your server what's in the pot today.</p>
+            </div>
           </div>
+          <div class="section__head" style="margin-bottom:16px;"><span class="kicker">Kids Menu</span></div>
+          <p class="tab-panel__intro">All kids meals come with your choice of fries, tots, or mandarin oranges.</p>
           <div class="menu-list">
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>The Double Bogey</h3><span class="dots"></span><span class="price">$15.99</span></div>
-              <p class="price-desc">Two smash patties, double cheese, house sauce, and pickles on a toasted brioche bun. Our heavyweight champion.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Mini Corn Dogs</h3><span class="dots"></span><span class="price">$7.49</span></div>
+              <p class="price-desc">Golden mini corn dogs, easy to dunk.</p>
             </div>
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Bacon Jalape&ntilde;o Cheeseburger</h3><span class="dots"></span><span class="price">$14.99</span></div>
-              <p class="price-desc">Smash patty with applewood bacon, fresh jalape&ntilde;os, and pepper jack for a slow burn.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Slider Burgers</h3><span class="dots"></span><span class="price">$7.49</span></div>
+              <p class="price-desc">Two mini burgers, plain and simple.</p>
             </div>
             <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Fried Egg Burger</h3><span class="dots"></span><span class="price">$14.99</span></div>
-              <p class="price-desc">Smash patty topped with a sunny fried egg, bacon, and American cheese. Breakfast meets game day.</p>
+              <div class="price-row" style="margin-top:0;"><h3>Cheese Quesadilla</h3><span class="dots"></span><span class="price">$6.49</span></div>
+              <p class="price-desc">Melty cheese in a grilled tortilla.</p>
+            </div>
+            <div class="menu-list__item">
+              <div class="price-row" style="margin-top:0;"><h3>Boneless Wings</h3><span class="dots"></span><span class="price">$7.49</span></div>
+              <p class="price-desc">Kid-sized boneless wings, sauced or plain.</p>
             </div>
           </div>
         </div>
 
-        <div class="tab-panel" id="tab-sandwiches" role="tabpanel">
-          <p class="tab-panel__intro">Hearty handhelds served with house chips.</p>
-          <div class="menu-grid" style="margin-bottom:36px;">
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/brisket-grilled-cheese.jpg" alt="Smoked brisket sandwich with melted cheese in a basket with house chips" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Brisket in the City</h3><span class="dots"></span><span class="menu-card__price">$15.99</span></div>
-                <p>Slow-smoked brisket piled on brioche with melted cheese, crispy onions, and sweet BBQ drizzle. Served with house chips.</p>
-              </div>
-            </article>
-            </div>
-          <div class="menu-list">
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>The Birdie Sandwich</h3><span class="dots"></span><span class="price">$14.99</span></div>
-              <p class="price-desc">Buttermilk-fried chicken breast with melted cheese, sweet-heat salsa, and pickles on toasted brioche. Served with chips.</p>
-            </div>
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Chicken Street Tacos</h3><span class="dots"></span><span class="price">$11.99</span></div>
-              <p class="price-desc">Three grilled chicken tacos with cotija, cilantro, and chipotle crema, plus a side of roasted street corn.</p>
-            </div>
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Bang Bang Chicken</h3><span class="dots"></span><span class="price">$14.99</span></div>
-              <p class="price-desc">Crispy chicken tossed in sweet-heat bang bang sauce with slaw on a toasted bun.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-panel" id="tab-wraps" role="tabpanel">
-          <p class="tab-panel__intro">Rolled tight and ready for the next round.</p>
-          <div class="menu-grid" style="margin-bottom:36px;">
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/caesar-wrap.jpg" alt="Chicken Caesar wrap halves with seasoned house chips" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Chicken Caesar Wrap</h3><span class="dots"></span><span class="menu-card__price">$12.99</span></div>
-                <p>Grilled chicken, romaine, parmesan, and creamy Caesar in a warm tortilla. Served with house chips.</p>
-              </div>
-            </article>
-          </div>
-          <div class="menu-list">
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Hot in the City</h3><span class="dots"></span><span class="price">$13.99</span></div>
-              <p class="price-desc">Crispy buffalo-tossed chicken with lettuce, tomato, and cool ranch in a spinach tortilla. Served with chips.</p>
-            </div>
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Smokehouse Brisket Wrap</h3><span class="dots"></span><span class="price">$13.99</span></div>
-              <p class="price-desc">Chopped smoked brisket, crispy onions, fresh greens, and house sauce rolled in a warm tortilla, with house chips.</p>
-            </div>
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Asian Dragon Wrap</h3><span class="dots"></span><span class="price">$13.99</span></div>
-              <p class="price-desc">Crispy chicken, slaw, and sweet Asian chili sauce with a spicy kick.</p>
-            </div>
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Turkey Wrap</h3><span class="dots"></span><span class="price">$12.99</span></div>
-              <p class="price-desc">A house favorite &mdash; sliced turkey, lettuce, tomato, and house sauce in a warm tortilla.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-panel" id="tab-pizza" role="tabpanel">
-          <p class="tab-panel__intro">Hand-stretched pies, perfect for the table.</p>
-          <div class="menu-grid" style="margin-bottom:36px;">
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/pepperoni-pizza.jpg" alt="Hand-stretched pepperoni pizza on a wood board" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>Pepperoni Pizza</h3><span class="dots"></span><span class="menu-card__price">$14.99</span></div>
-                <p>Loaded edge-to-edge with crispy cup pepperoni.</p>
-              </div>
-            </article>
-            <article class="menu-card">
-              <div class="menu-card__img"><img src="assets/img/gallery/flatbread.jpg" alt="Hand-stretched supreme pizza with sausage, pepperoni, olives, and onions on a wood board" loading="lazy"></div>
-              <div class="menu-card__body">
-                <div class="menu-card__row"><h3>The Supreme</h3><span class="dots"></span><span class="menu-card__price">$16.99</span></div>
-                <p>Italian sausage, pepperoni, black olives, and onions over a melty cheese blend.</p>
-              </div>
-            </article>
-          </div>
-          <div class="menu-list">
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>Cheese Pizza</h3><span class="dots"></span><span class="price">$12.99</span></div>
-              <p class="price-desc">Classic hand-stretched pie with red sauce and a blend of melty cheeses.</p>
-            </div>
-            <div class="menu-list__item">
-              <div class="price-row" style="margin-top:0;"><h3>BBQ Chicken Pizza</h3><span class="dots"></span><span class="price">$15.99</span></div>
-              <p class="price-desc">Grilled chicken, red onion, and sweet BBQ over a cheese blend.</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="menu-disclaimer">Prices &amp; availability subject to change &mdash; call <a href="tel:+16084970170">(608) 497-0170</a> for today's menu &amp; specials</p>
+        <p class="menu-disclaimer">Prices &amp; availability subject to change &mdash; call <a href="tel:+16084970170">(608) 497-0170</a> for today's menu &amp; specials.<br>These items are cooked to order. Consuming raw or undercooked meats, poultry, shellfish, or eggs may increase your risk of foodborne illness.</p>
       </div>
     </section>
 
