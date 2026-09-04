@@ -755,3 +755,32 @@ h2 em { font-style: italic; color: var(--primary); }
   text-decoration: none;
   border-bottom: none;
 }
+
+/* Service area */
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.svc-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 4px;
+  border-bottom: 1px solid var(--outline);
+}
+.svc-row__pin { color: var(--primary); flex: 0 0 auto; }
+.svc-row h3 { font-size: 1rem; margin: 0; }
+.svc-row .svc-tag {
+  margin-left: auto;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+@media (max-width: 700px) {
+  .svc-grid { grid-template-columns: 1fr; gap: 0; }
+}
