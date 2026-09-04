@@ -71,8 +71,7 @@
   if (!form) return;
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    // EDIT: change to the bar's real email address
-    var to = "info@puttersbargrill.com";
+    var to = "hurley.puttersverona@yahoo.com";
     var name = document.getElementById("cfName").value.trim();
     var email = document.getElementById("cfEmail").value.trim();
     var type = document.getElementById("cfType").value;
@@ -174,5 +173,25 @@
     if (e.key === "Escape") close();
     if (e.key === "ArrowLeft") show(idx - 1);
     if (e.key === "ArrowRight") show(idx + 1);
+  });
+})();
+
+// Careers application form -> email
+(function () {
+  var form = document.getElementById("careersForm");
+  if (!form) return;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var to = "hurley.puttersverona@yahoo.com";
+    var name = document.getElementById("jobName").value.trim();
+    var email = document.getElementById("jobEmail").value.trim();
+    var phone = document.getElementById("jobPhone").value.trim();
+    var role = document.getElementById("jobRole").value;
+    var msg = document.getElementById("jobMsg").value.trim();
+    var subject = "[Employment] " + role + " application — " + name;
+    var body = msg + "\n\n— " + name + "\n" + email + (phone ? "\n" + phone : "");
+    window.location.href = "mailto:" + to +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
   });
 })();
