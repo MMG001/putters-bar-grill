@@ -784,3 +784,24 @@ h2 em { font-style: italic; color: var(--primary); }
 @media (max-width: 700px) {
   .svc-grid { grid-template-columns: 1fr; gap: 0; }
 }
+
+/* Skip link (visible on keyboard focus only) */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--primary); color: var(--on-primary);
+  padding: 10px 18px; border-radius: 0 0 8px 0; font-weight: 700;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+
+/* Visible breadcrumbs (mirror the BreadcrumbList schema trails) */
+.breadcrumbs { padding: 14px 0 0; font-size: 0.85rem; }
+.breadcrumbs a { color: var(--on-surface-variant); text-decoration: none; }
+.breadcrumbs a:hover { color: var(--primary); }
+.breadcrumbs [aria-current="page"] { color: var(--on-surface); }
+.breadcrumbs__sep { color: var(--outline-variant); }
+
+/* Form submission status */
+.form-status { min-height: 1.2em; margin-top: 12px; font-size: 0.95rem; }
+.form-status--ok { color: var(--primary); }
+.form-status--err { color: #ff9d9d; }

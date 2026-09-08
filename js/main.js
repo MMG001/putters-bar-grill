@@ -65,24 +65,42 @@
   update();
 })();
 
-// Contact form -> compose email (static site, no backend)
-(function () {
-  var form = document.getElementById("contactForm");
+// Form submit -> FormSubmit AJAX endpoint (shows inline status)
+function wireForm(formId, subjectFn) {
+  var form = document.getElementById(formId);
   if (!form) return;
+  var status = document.getElementById(formId + "Status");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var to = "hurley.puttersverona@yahoo.com";
-    var name = document.getElementById("cfName").value.trim();
-    var email = document.getElementById("cfEmail").value.trim();
-    var type = document.getElementById("cfType").value;
-    var msg = document.getElementById("cfMsg").value.trim();
-    var subject = "[" + type + "] Website message from " + name;
-    var body = msg + "\n\n— " + name + "\n" + email;
-    window.location.href = "mailto:" + to +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
+    var btn = form.querySelector('[type="submit"], button:not([type])');
+    var data = new FormData(form);
+    if (data.get("_honey")) return; // bot
+    data.append("_subject", subjectFn(data));
+    if (btn) { btn.disabled = true; }
+    status.textContent = "Sending\u2026";
+    status.className = "form-status";
+    fetch("https://formsubmit.co/ajax/hurley.puttersverona@yahoo.com", {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      if (res.success === "true" || res.success === true) {
+        status.textContent = "Got it \u2014 thanks! We\u2019ll get back to you soon.";
+        status.className = "form-status form-status--ok";
+        form.reset();
+      } else { throw new Error(); }
+    }).catch(function () {
+      status.textContent = "Something went wrong \u2014 please call us at (608) 497-0170 or email hurley.puttersverona@yahoo.com.";
+      status.className = "form-status form-status--err";
+    }).finally(function () { if (btn) { btn.disabled = false; } });
   });
-})();
+}
+wireForm("contactForm", function (d) {
+  return "[" + (d.get("type") || "General") + "] Website message from " + d.get("name");
+});
+wireForm("careersForm", function (d) {
+  return "[Application: " + (d.get("role") || "Any role") + "] " + d.get("name");
+});
 
 // Menu category tabs
 (function () {
@@ -173,25 +191,5 @@
     if (e.key === "Escape") close();
     if (e.key === "ArrowLeft") show(idx - 1);
     if (e.key === "ArrowRight") show(idx + 1);
-  });
-})();
-
-// Careers application form -> email
-(function () {
-  var form = document.getElementById("careersForm");
-  if (!form) return;
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var to = "hurley.puttersverona@yahoo.com";
-    var name = document.getElementById("jobName").value.trim();
-    var email = document.getElementById("jobEmail").value.trim();
-    var phone = document.getElementById("jobPhone").value.trim();
-    var role = document.getElementById("jobRole").value;
-    var msg = document.getElementById("jobMsg").value.trim();
-    var subject = "[Employment] " + role + " application — " + name;
-    var body = msg + "\n\n— " + name + "\n" + email + (phone ? "\n" + phone : "");
-    window.location.href = "mailto:" + to +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
   });
 })();

@@ -31,6 +31,8 @@ Each page carries one `@graph`: `WebSite`, `BarOrPub` (the single business entit
 30-mile GeoCircle (48,280 m) with all 50 incorporated cities/villages and 7 counties
 inside it, each `sameAs`-linked to Wikipedia.
 
+Forms POST to FormSubmit (see AGENTS.md — one-time email activation required).
+
 **Intentionally NOT marked up (do not add without fixing the underlying data):**
 - `Event` nodes on specials.html — the schedule shown is still sample content.
 - `JobPosting` on careers.html — roles are a form dropdown, not dated postings.

@@ -13,8 +13,21 @@ Injected between markers:
   <!-- BEGIN JSON-LD SCHEMA --> ... <!-- END JSON-LD SCHEMA -->
 so re-running is idempotent. Do not hand-edit the injected block.
 """
-import json, re, sys, html
+import json, re, sys, html, subprocess
 from pathlib import Path
+
+def git_dates(fname):
+    """(datePublished, dateModified) from git history; (None, None) if unavailable."""
+    try:
+        pub = subprocess.run(["git", "log", "--diff-filter=A", "--follow",
+                              "--format=%cI", "--", fname], cwd=str(Path(__file__).resolve().parent.parent),
+                             capture_output=True, text=True).stdout.strip().splitlines()
+        mod = subprocess.run(["git", "log", "-1", "--format=%cI", "--", fname],
+                             cwd=str(Path(__file__).resolve().parent.parent),
+                             capture_output=True, text=True).stdout.strip()
+        return (pub[-1] if pub else None), (mod or None)
+    except Exception:
+        return None, None
 
 ROOT = Path(__file__).resolve().parent.parent
 DOMAIN = "https://puttersverona.com"
@@ -247,6 +260,11 @@ def webpage_node(fname, meta, ptype, main_entity=None, about=None):
           "breadcrumb": {"@id": f"{url}#breadcrumb"}, "inLanguage": "en-US"}
     if desc:
         wp["description"] = desc
+    pub, mod = git_dates(fname)
+    if pub:
+        wp["datePublished"] = pub
+    if mod:
+        wp["dateModified"] = mod
     if ogimg:
         wp["primaryImageOfPage"] = {"@type": "ImageObject", "url": ogimg}
     if main_entity:
