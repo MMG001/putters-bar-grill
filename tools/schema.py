@@ -50,15 +50,15 @@ RADIUS_METERS = round(SERVICE_RADIUS_MI * 1609.34)  # 48280
 # nearest first. wiki=None -> title pattern "{Name},_Wisconsin".
 # Brooklyn's article title verified as disambiguated (Sep 2026).
 CITIES = [
-    ("Verona", None), ("Fitchburg", None), ("Middleton", None),
+    ("Verona", None, "Q1569520"), ("Fitchburg", None), ("Middleton", None),
     ("Shorewood Hills", None), ("Belleville", None), ("Oregon", None),
     ("Madison", None), ("Mount Horeb", None), ("Cross Plains", None),
     ("Maple Bluff", None), ("Monona", None),
-    ("Brooklyn", "Brooklyn_(village),_Wisconsin"),
+    ("Brooklyn", "Brooklyn_(village),_Wisconsin", "Q2322312"),
     ("McFarland", None), ("New Glarus", None), ("Black Earth", None),
     ("Waunakee", None), ("Blue Mounds", None), ("Monticello", None),
     ("Stoughton", None), ("Barneveld", None), ("Dane", None),
-    ("Cottage Grove", None), ("Mazomanie", None), ("Windsor", None),
+    ("Cottage Grove", None), ("Mazomanie", None), ("Windsor", None, "Q8024546"),
     ("Evansville", None), ("Albany", None), ("Blanchardville", None),
     ("DeForest", None), ("Hollandale", None), ("Sun Prairie", None),
     ("Sauk City", None), ("Lodi", None), ("Prairie du Sac", None),
@@ -110,10 +110,14 @@ def area_served():
         "geoRadius": RADIUS_METERS,
         "description": f"{SERVICE_RADIUS_MI}-mile radius around Putters Bar & Grill in Verona, WI",
     }]
-    for name, wiki in CITIES:
+    for entry in CITIES:
+        name, wiki, qid = (entry + (None,))[:3] if len(entry) == 2 else entry
         title = wiki or f"{name.replace(' ', '_')},_Wisconsin"
+        same = [f"https://en.wikipedia.org/wiki/{title}"]
+        if qid:  # Wikidata Q-IDs only when individually verified (rule 10)
+            same.append(f"https://www.wikidata.org/wiki/{qid}")
         nodes.append({"@type": "City", "name": f"{name}, WI",
-                      "sameAs": f"https://en.wikipedia.org/wiki/{title}"})
+                      "sameAs": same if len(same) > 1 else same[0]})
     for c in COUNTIES:
         nodes.append({"@type": "AdministrativeArea", "name": f"{c} County, WI",
                       "sameAs": f"https://en.wikipedia.org/wiki/{c}_County,_Wisconsin"})
@@ -242,7 +246,8 @@ def webpage_node(fname, meta, ptype, main_entity=None, about=None):
     return wp
 
 VERONA_CITY = {"@type": "City", "name": "Verona, Wisconsin",
-               "sameAs": "https://en.wikipedia.org/wiki/Verona,_Wisconsin"}
+               "sameAs": ["https://en.wikipedia.org/wiki/Verona,_Wisconsin",
+                          "https://www.wikidata.org/wiki/Q1569520"]}
 
 # ---------------------------------------------------------------- build graph
 def build_graph(fname, src):
