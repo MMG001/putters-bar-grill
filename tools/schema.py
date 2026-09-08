@@ -63,9 +63,9 @@ RADIUS_METERS = round(SERVICE_RADIUS_MI * 1609.34)  # 48280
 # nearest first. wiki=None -> title pattern "{Name},_Wisconsin".
 # Brooklyn's article title verified as disambiguated (Sep 2026).
 CITIES = [
-    ("Verona", None, "Q1569520"), ("Fitchburg", None), ("Middleton", None),
-    ("Shorewood Hills", None), ("Belleville", None), ("Oregon", None),
-    ("Madison", None), ("Mount Horeb", None), ("Cross Plains", None),
+    ("Verona", None, "Q1569520"), ("Fitchburg", None, "Q1570633"), ("Middleton", None, "Q1570640"),
+    ("Shorewood Hills", None), ("Belleville", None, "Q2609930"), ("Oregon", None, "Q936062"),
+    ("Madison", None, "Q43788"), ("Mount Horeb", None, "Q2226176"), ("Cross Plains", None, "Q2085810"),
     ("Maple Bluff", None), ("Monona", None),
     ("Brooklyn", "Brooklyn_(village),_Wisconsin", "Q2322312"),
     ("McFarland", None), ("New Glarus", None), ("Black Earth", None),
@@ -82,6 +82,44 @@ CITIES = [
     ("Footville", None), ("Poynette", None), ("Orfordville", None),
     ("Spring Green", None), ("Dodgeville", None),
 ]
+
+# ------------------------------------------------- SERVICE AREAS (10-mi roster)
+# All Wikidata Q-IDs individually verified 2026-09-08. Coordinates from
+# Wikipedia/Wikidata. kind: "City" = incorporated, "Place" = unincorporated.
+WISCONSIN = {"name": "Wisconsin", "qid": "Q1537",
+             "wiki": "https://en.wikipedia.org/wiki/Wisconsin"}
+SERVICE_AREAS = [
+    # name, page file, lat, lng, qid, wikipedia title, kind, tag (about-grid label)
+    ("Verona", "verona-wi.html", 42.98972, -89.53556, "Q1569520", "Verona,_Wisconsin", "City", "Our Home"),
+    ("Fitchburg", "fitchburg-wi.html", 43.0117, -89.4262, "Q1570633", "Fitchburg,_Wisconsin", "City", "Just East"),
+    ("Madison", "madison-wi.html", 43.0731, -89.4012, "Q43788", "Madison,_Wisconsin", "City", "10 Miles NE"),
+    ("Middleton", "middleton-wi.html", 43.06028, -89.57167, "Q1570640", "Middleton,_Wisconsin", "City", "Short Drive"),
+    ("Paoli", "paoli-wi.html", 42.92944, -89.52361, "Q7132120", "Paoli,_Wisconsin", "Place", "Just South"),
+    ("Oregon", "oregon-wi.html", 42.90444, -89.42972, "Q936062", "Oregon,_Wisconsin", "City", "Nearby"),
+    ("Mount Horeb", "mount-horeb-wi.html", 43.00639, -89.73417, "Q2226176", "Mount_Horeb,_Wisconsin", "City", "Trail West"),
+    ("Cross Plains", "cross-plains-wi.html", 43.09472, -89.66111, "Q2085810", "Cross_Plains,_Wisconsin", "City", "Up North"),
+    ("Belleville", "belleville-wi.html", 42.87000, -89.53806, "Q2609930", "Belleville,_Wisconsin", "City", "Sugar River"),
+    ("Riley", "riley-wi.html", 43.02333, -89.62250, "Q7334167", "Riley,_Wisconsin", "Place", "On the Trail"),
+    ("Mount Vernon", "mount-vernon-wi.html", 42.94694, -89.65583, "Q6924346", "Mount_Vernon,_Wisconsin", "Place", "Countryside"),
+]
+SERVICE_AREA_BY_FILE = {a[1]: a for a in SERVICE_AREAS}
+
+def city_entity(area, url):
+    """Rich page-scoped place entity: geo + verified Wikidata + containedInPlace."""
+    name, _, lat, lng, qid, wiki, kind, _tag = area
+    return {
+        "@type": kind, "@id": f"{url}#city",
+        "name": f"{name}, Wisconsin",
+        "geo": {"@type": "GeoCoordinates", "@id": f"{url}#citygeo",
+                "latitude": lat, "longitude": lng},
+        "sameAs": [f"https://en.wikipedia.org/wiki/{wiki}",
+                   f"https://www.wikidata.org/wiki/{qid}"],
+        "containedInPlace": {"@type": "State", "@id": f"{url}#state",
+                             "name": WISCONSIN["name"],
+                             "sameAs": [WISCONSIN["wiki"],
+                                        f"https://www.wikidata.org/wiki/{WISCONSIN['qid']}"]},
+    }
+
 COUNTIES = ["Dane", "Green", "Iowa", "Rock", "Sauk", "Columbia", "Lafayette"]
 
 # Per-page metadata: breadcrumb trail (name, file) and WebPage subtype.
@@ -131,9 +169,19 @@ def area_served():
             same.append(f"https://www.wikidata.org/wiki/{qid}")
         nodes.append({"@type": "City", "name": f"{name}, WI",
                       "sameAs": same if len(same) > 1 else same[0]})
+    for name, lat, lng, qid, wiki in [
+        ("Paoli", 42.92944, -89.52361, "Q7132120", "Paoli,_Wisconsin"),
+        ("Riley", 43.02333, -89.62250, "Q7334167", "Riley,_Wisconsin"),
+        ("Mount Vernon", 42.94694, -89.65583, "Q6924346", "Mount_Vernon,_Wisconsin")]:
+        nodes.append({"@type": "Place", "name": f"{name}, WI",
+                      "sameAs": [f"https://en.wikipedia.org/wiki/{wiki}",
+                                 f"https://www.wikidata.org/wiki/{qid}"]})
     for c in COUNTIES:
+        same = [f"https://en.wikipedia.org/wiki/{c}_County,_Wisconsin"]
+        if c == "Dane":  # Q-ID verified 2026-09-08
+            same.append("https://www.wikidata.org/wiki/Q502200")
         nodes.append({"@type": "AdministrativeArea", "name": f"{c} County, WI",
-                      "sameAs": f"https://en.wikipedia.org/wiki/{c}_County,_Wisconsin"})
+                      "sameAs": same if len(same) > 1 else same[0]})
     return nodes
 
 # ---------------------------------------------------------------- menu parser
@@ -271,10 +319,6 @@ def webpage_node(fname, meta, ptype, main_entity=None, about=None):
         wp["mainEntity"] = main_entity
     return wp
 
-VERONA_CITY = {"@type": "City", "name": "Verona, Wisconsin",
-               "sameAs": ["https://en.wikipedia.org/wiki/Verona,_Wisconsin",
-                          "https://www.wikidata.org/wiki/Q1569520"]}
-
 # ---------------------------------------------------------------- build graph
 def build_graph(fname, src):
     meta = head_meta(src)
@@ -286,9 +330,11 @@ def build_graph(fname, src):
         nodes.append(webpage_node(fname, meta, cfg["ptype"],
                                   main_entity={"@id": menu["@id"]}))
         nodes.append(menu)
-    elif fname == "verona-wi.html":
-        nodes.append(webpage_node(fname, meta, cfg["ptype"],
-                                  main_entity=VERONA_CITY, about=VERONA_CITY))
+    elif fname in SERVICE_AREA_BY_FILE:
+        city = city_entity(SERVICE_AREA_BY_FILE[fname], page_url(fname))
+        ref = {"@id": city["@id"]}
+        nodes.append(webpage_node(fname, meta, cfg["ptype"], main_entity=ref, about=ref))
+        nodes.append(city)
     else:
         nodes.append(webpage_node(fname, meta, cfg["ptype"]))
     return {"@context": "https://schema.org", "@graph": nodes}

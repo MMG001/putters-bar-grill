@@ -41,9 +41,15 @@ Forms POST to FormSubmit (see AGENTS.md — one-time email activation required).
 - Saturday–Sunday hours — page says "Call for hours," so they're omitted.
 - `sameAs` profiles — empty until confirmed. Add the Google Business Profile URL
   and any social URLs to `BUSINESS["sameAs"]` in `tools/schema.py`, then re-run.
-- Wikidata Q-IDs exist for only 3 of the 50 cities (Verona Q1569520, Brooklyn
-  Q2322312, Windsor Q8024546) — the ones individually verified. Look up and
-  confirm a Q-ID before adding it to any other city; never add from memory.
+- Wikidata Q-IDs are attached only where individually verified (13 as of
+  2026-09-08): Wisconsin Q1537, Dane County Q502200, all 11 service-area
+  places (see SERVICE_AREAS in tools/schema.py), plus Brooklyn Q2322312 and
+  Windsor Q8024546. Never add a Q-ID from memory — verify first.
+- Service-area city pages: SERVICE_AREAS in tools/schema.py is the registry.
+  When a city page is built, add it to PAGES and re-run the generator; it
+  gets a page-scoped City/Place entity (geo + Wikipedia + Wikidata +
+  containedInPlace Wisconsin) as the WebPage's mainEntity. The business
+  entity keeps its single stable @id on every page.
 
 `priceRange` is computed at build time from the prices published on menu.html
 (currently $4.99-$16.49) — it updates itself when menu prices change.
