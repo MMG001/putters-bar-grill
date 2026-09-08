@@ -37,12 +37,14 @@ inside it, each `sameAs`-linked to Wikipedia.
 - `Review`/`AggregateRating` — no first-party reviews are collected on-site; if
   Google/Yelp reviews are ever *displayed*, they still must not be marked up.
 - Saturday–Sunday hours — page says "Call for hours," so they're omitted.
-- `priceRange` — not published anywhere on the site as a statement.
 - `sameAs` profiles — empty until confirmed. Add the Google Business Profile URL
   and any social URLs to `BUSINESS["sameAs"]` in `tools/schema.py`, then re-run.
 - Wikidata Q-IDs exist for only 3 of the 50 cities (Verona Q1569520, Brooklyn
   Q2322312, Windsor Q8024546) — the ones individually verified. Look up and
   confirm a Q-ID before adding it to any other city; never add from memory.
+
+`priceRange` is computed at build time from the prices published on menu.html
+(currently $4.99-$16.49) — it updates itself when menu prices change.
 
 Hours in the schema mirror contact.html (Mon 4–10 PM, Tue–Fri 10 AM–10 PM), which
 originally came from the old Bogey Factory listing — verify with the owner.

@@ -192,7 +192,14 @@ def potential_actions():
     ]
 
 # ---------------------------------------------------------------- core nodes
+def menu_price_range():
+    """priceRange derived from prices published on menu.html — never asserted."""
+    prices = [float(p) for p in re.findall(r"\$(\d+\.\d{2})",
+              (ROOT / "menu.html").read_text(encoding="utf-8"))]
+    return f"${min(prices):.2f}-${max(prices):.2f}" if prices else None
+
 def business_node(on_menu_page):
+    price_range = menu_price_range()
     b = {
         "@type": BUSINESS["type"], "@id": f"{DOMAIN}/#business",
         "name": BUSINESS["name"], "url": f"{DOMAIN}/",
@@ -205,6 +212,7 @@ def business_node(on_menu_page):
         "hasMap": BUSINESS["map"],
         "telephone": BUSINESS["phone"], "email": BUSINESS["email"],
         "servesCuisine": BUSINESS["cuisine"],
+        **({"priceRange": price_range} if price_range else {}),
         "acceptsReservations": f"{DOMAIN}/contact.html#contactForm",
         "openingHoursSpecification": [
             {"@type": "OpeningHoursSpecification", "dayOfWeek": h["days"],
