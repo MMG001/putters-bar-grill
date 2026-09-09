@@ -805,3 +805,8 @@ h2 em { font-style: italic; color: var(--primary); }
 .form-status { min-height: 1.2em; margin-top: 12px; font-size: 0.95rem; }
 .form-status--ok { color: var(--primary); }
 .form-status--err { color: #ff9d9d; }
+
+/* Linked service-area rows (hub page) */
+a.svc-row { color: inherit; text-decoration: none; }
+a.svc-row:hover h3 { color: var(--primary); }
+a.svc-row:hover .svc-tag { color: var(--on-surface); }

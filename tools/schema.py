@@ -132,6 +132,7 @@ PAGES = {
     "contact.html": {"ptype": "ContactPage",  "crumbs": [("Home", "index.html"), ("Contact & Location", "contact.html")]},
     "careers.html": {"ptype": "WebPage",      "crumbs": [("Home", "index.html"), ("Contact & Location", "contact.html"), ("Join Our Team", "careers.html")]},
     "verona-wi.html": {"ptype": "WebPage",    "crumbs": [("Home", "index.html"), ("Verona, Wisconsin", "verona-wi.html")]},
+    "service-areas.html": {"ptype": "CollectionPage", "crumbs": [("Home", "index.html"), ("Service Areas", "service-areas.html")]},
     "sitemap.html": {"ptype": "CollectionPage", "crumbs": [("Home", "index.html"), ("Sitemap", "sitemap.html")]},
     "privacy.html": {"ptype": "WebPage",      "crumbs": [("Home", "index.html"), ("Privacy Policy", "privacy.html")]},
     "equal-opportunity.html": {"ptype": "WebPage", "crumbs": [("Home", "index.html"), ("Equal Opportunity", "equal-opportunity.html")]},
