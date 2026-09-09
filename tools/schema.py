@@ -52,7 +52,7 @@ BUSINESS = {
     ],
     # Visible amenities (index.html copy: screens, full bar, patio, 6 TrackMan bays)
     "amenities": ["Wall-to-wall TV screens", "Full bar", "Outdoor patio",
-                  "TrackMan golf simulators (6 bays)"],
+                  "Indoor golf simulators on site"],
     "sameAs": [],  # add GBP / social profile URLs here once confirmed (README)
 }
 

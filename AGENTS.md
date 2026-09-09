@@ -61,6 +61,11 @@ form `action` attributes, the fetch URL in `js/main.js`, `BUSINESS`
 in `tools/schema.py`, and the mailto links site-wide.
 
 ## Content ground rules
+- Positioning: lead with "sports bar & grill" everywhere (titles, metas, copy) —
+  it's the search phrase. Golf simulators get light supporting mentions ONLY:
+  they are inside the building but NOT owned or controlled by Putters. Never
+  write "our TrackMan bays," "book a bay with us," or bay counts as Putters
+  claims — say "indoor golf simulators on site."
 - Address always includes "Suite 400". Phone format (608) 497-0170.
 - The rebrand matters: never surface "Bogey Factory" branding to guests
   (it exists only in historical notes and one gallery editorial decision).
