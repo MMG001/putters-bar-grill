@@ -56,6 +56,32 @@ BUSINESS = {
     "sameAs": [],  # add GBP / social profile URLs here once confirmed (README)
 }
 
+# The Bogey Factory — the golf-simulator operation sharing the open space at
+# 503 W Verona Ave (Putters leases within it). Backend/SEO entity ONLY: per
+# AGENTS.md content rules the name is never surfaced in guest-facing copy.
+# The bay-booking ReserveAction lives on THIS entity, not on Putters, because
+# Putters does not own or control the simulators.
+BOGEY_FACTORY = {
+    "name": "The Bogey Factory",
+    "type": "SportsActivityLocation",
+    "description": ("Indoor golf simulator facility sharing an open space with "
+                    "Putters Bar & Grill at 503 W Verona Ave in Verona, WI."),
+    "booking": "https://plusonegolf.app/book/bogey-factory",
+}
+
+def bogey_factory_node():
+    return {
+        "@type": BOGEY_FACTORY["type"], "@id": f"{DOMAIN}/#bogey-factory",
+        "name": BOGEY_FACTORY["name"],
+        "description": BOGEY_FACTORY["description"],
+        "address": {"@type": "PostalAddress", "streetAddress": "503 W Verona Ave",
+                    "addressLocality": BUSINESS["city"], "addressRegion": BUSINESS["region"],
+                    "postalCode": BUSINESS["zip"], "addressCountry": BUSINESS["country"]},
+        "geo": {"@type": "GeoCoordinates", "latitude": BUSINESS["lat"], "longitude": BUSINESS["lng"]},
+        "potentialAction": {"@type": "ReserveAction", "name": "Reserve Your Bay",
+                            "target": entry_point(BOGEY_FACTORY["booking"])},
+    }
+
 SERVICE_RADIUS_MI = 30
 RADIUS_METERS = round(SERVICE_RADIUS_MI * 1609.34)  # 48280
 
@@ -282,6 +308,7 @@ def business_node(on_menu_page):
                     "postalCode": BUSINESS["zip"], "addressCountry": BUSINESS["country"]},
         "geo": {"@type": "GeoCoordinates", "latitude": BUSINESS["lat"], "longitude": BUSINESS["lng"]},
         "hasMap": BUSINESS["map"],
+        "containedInPlace": {"@id": f"{DOMAIN}/#bogey-factory"},
         "telephone": BUSINESS["phone"], "email": BUSINESS["email"],
         "servesCuisine": BUSINESS["cuisine"],
         **({"priceRange": price_range} if price_range else {}),
@@ -335,7 +362,8 @@ def build_graph(fname, src):
     meta = head_meta(src)
     cfg = PAGES[fname]
     on_menu = fname == "menu.html"
-    nodes = [website_node(), business_node(on_menu), breadcrumb_node(fname, cfg["crumbs"])]
+    nodes = [website_node(), business_node(on_menu), bogey_factory_node(),
+             breadcrumb_node(fname, cfg["crumbs"])]
     if on_menu:
         menu = parse_menu(src)
         nodes.append(webpage_node(fname, meta, cfg["ptype"],

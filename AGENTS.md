@@ -68,7 +68,13 @@ in `tools/schema.py`, and the mailto links site-wide.
   claims — say "indoor golf simulators on site."
 - Address always includes "Suite 400". Phone format (608) 497-0170.
 - The rebrand matters: never surface "Bogey Factory" branding to guests
-  (it exists only in historical notes and one gallery editorial decision).
+  (it exists only in historical notes, one gallery editorial decision, and
+  the JSON-LD `#bogey-factory` entity — backend/SEO only, added Sep 2026).
+- Header nav CTA is "Reserve Your Bay" -> the sim operator's external booking
+  page (plusonegolf.app/book/bogey-factory, new tab). Table booking stays on
+  the hero button / contact form. In schema, the bay ReserveAction belongs to
+  the `#bogey-factory` entity (SportsActivityLocation, linked from the
+  business via containedInPlace) — never attribute it to Putters.
 - `verona-wi.html` facts were research-verified — don't "refresh" them
   from memory; verify before changing.
 - Don't add Wikidata Q-IDs or `sameAs` profile URLs without verifying
