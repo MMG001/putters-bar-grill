@@ -69,6 +69,15 @@ in `tools/schema.py`, and the mailto links site-wide.
 - Don't add Wikidata Q-IDs or `sameAs` profile URLs without verifying
   each one (see README schema section).
 
+## Service-area city pages
+Ten city guides ({slug}-wi.html) built by `tools/build_city_pages.py` (one-shot;
+content lives in that script's per-city dicts — every paragraph is city-specific
+and must stay that way: no sentence should survive swapping the city name).
+Hub: service-areas.html. Hierarchy: Home / Service Areas / {City}. Each page:
+unique title/desc/canonical/OG, stat cards, 2 researched paragraphs, game-day
+route, rotating amenity chips + CTA, Nearby-communities links, and a generated
+@graph with a page-scoped City/Place entity (geo + Wikipedia + Wikidata).
+
 ## Known open items (as of Sep 2026)
 - Weekend hours: contact.html says "Call for hours"; schema omits Sat–Sun.
   Weekday hours trace to the old Bogey Factory listing — unverified.
