@@ -1,0 +1,24 @@
+# Putters Bar & Grill
+
+> Sports bar and TrackMan golf-simulator lounge at 503 W Verona Ave, Suite 400,
+> Verona, WI 53593 (formerly The Bogey Factory). Phone (608) 497-0170.
+> Hours: Mon 4-10 PM, Tue-Fri 10 AM-10 PM, weekends call ahead.
+> Wall-to-wall screens, scratch kitchen, full bar, patio, 6 TrackMan bays.
+> Serves southwest Dane County, WI within about a 10-mile radius, and the
+> greater Madison area within 30 miles.
+
+Every page carries a schema.org JSON-LD @graph; the business entity is
+https://puttersverona.com/#business (BarOrPub).
+
+## Core pages
+- [Home](https://puttersverona.com/): overview, game-day info, hours
+- [Food menu](https://puttersverona.com/menu.html): full menu with prices (wings, burgers, flatbreads, salads, kids)
+- [Specials & events](https://puttersverona.com/specials.html)
+- [Contact, location & booking](https://puttersverona.com/contact.html)
+- [About](https://puttersverona.com/about.html)
+- [Gallery](https://puttersverona.com/gallery.html)
+- [Careers](https://puttersverona.com/careers.html)
+
+## Service-area city guides (each with a verified Wikidata-linked place entity)
+- [All service areas](https://puttersverona.com/service-areas.html)
+- [Verona](https://puttersverona.com/verona-wi.html) · [Fitchburg](https://puttersverona.com/fitchburg-wi.html) · [Madison](https://puttersverona.com/madison-wi.html) · [Middleton](https://puttersverona.com/middleton-wi.html) · [Paoli](https://puttersverona.com/paoli-wi.html) · [Oregon](https://puttersverona.com/oregon-wi.html) · [Mount Horeb](https://puttersverona.com/mount-horeb-wi.html) · [Cross Plains](https://puttersverona.com/cross-plains-wi.html) · [Belleville](https://puttersverona.com/belleville-wi.html) · [Riley](https://puttersverona.com/riley-wi.html) · [Mount Vernon](https://puttersverona.com/mount-vernon-wi.html)
