@@ -90,7 +90,7 @@ route, rotating amenity chips + CTA, Nearby-communities links, and a generated
 @graph with a page-scoped City/Place entity (geo + Wikipedia + Wikidata).
 
 ## Known open items (as of Sep 2026)
-- Weekend hours: contact.html says "Call for hours"; schema omits Sat–Sun.
+- Hours: Mon–Fri 2–10 PM, Sat–Sun 11 AM–10 PM (schema includes all seven days).
   Weekday hours trace to the old Bogey Factory listing — unverified.
 - `specials.html` schedule and reviews are **sample content** — that's why
   no Event schema exists.

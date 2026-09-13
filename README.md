@@ -38,7 +38,7 @@ Forms POST to FormSubmit (see AGENTS.md — one-time email activation required).
 - `JobPosting` on careers.html — roles are a form dropdown, not dated postings.
 - `Review`/`AggregateRating` — no first-party reviews are collected on-site; if
   Google/Yelp reviews are ever *displayed*, they still must not be marked up.
-- Saturday–Sunday hours — page says "Call for hours," so they're omitted.
+- (resolved) Weekend hours are now published: Sat–Sun 11 AM–10 PM.
 - `sameAs` profiles — empty until confirmed. Add the Google Business Profile URL
   and any social URLs to `BUSINESS["sameAs"]` in `tools/schema.py`, then re-run.
 - Wikidata Q-IDs are attached only where individually verified (13 as of
@@ -54,5 +54,5 @@ Forms POST to FormSubmit (see AGENTS.md — one-time email activation required).
 `priceRange` is computed at build time from the prices published on menu.html
 (currently $4.99-$16.49) — it updates itself when menu prices change.
 
-Hours in the schema mirror contact.html (Mon 4–10 PM, Tue–Fri 10 AM–10 PM), which
+Hours in the schema mirror contact.html (Mon–Fri 2–10 PM, Sat–Sun 11 AM–10 PM), which
 originally came from the old Bogey Factory listing — verify with the owner.

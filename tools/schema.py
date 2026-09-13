@@ -45,10 +45,10 @@ BUSINESS = {
     "image": f"{DOMAIN}/assets/img/hero-crowd.jpg",
     "map": "https://www.google.com/maps/search/?api=1&query=503+W+Verona+Ave+Suite+400+Verona+WI+53593",
     "cuisine": ["American"],
-    # Visible hours (contact.html). Sat-Sun show "Call for hours" -> omitted (rule 7).
+    # Visible hours (contact.html): Mon-Fri 2-10 PM, Sat-Sun 11 AM-10 PM.
     "hours": [
-        {"days": ["Monday"], "opens": "16:00", "closes": "22:00"},
-        {"days": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "22:00"},
+        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "14:00", "closes": "22:00"},
+        {"days": ["Saturday", "Sunday"], "opens": "11:00", "closes": "22:00"},
     ],
     # Visible amenities (index.html copy: screens, full bar, patio, 6 TrackMan bays)
     "amenities": ["Wall-to-wall TV screens", "Full bar", "Outdoor patio",
