@@ -35,6 +35,11 @@ site — the old invisible 50-city/7-county roster was removed 2026-09-16 as
 post-8/21 anti-spam hygiene.
 
 Forms POST to FormSubmit (see AGENTS.md — one-time email activation required).
+Required form fields (documented here, not in markup — `-input`
+`PropertyValueSpecification` is only recognized on
+`WebSite.SearchAction.query-input`; ClassySchema flags it everywhere else):
+- contact.html `#contactForm` → AskAction / ReserveAction: name*, email*, message* (type select optional)
+- careers.html `#careersForm` → ApplyAction: name*, email*, message* (phone, role optional)
 
 **Intentionally NOT marked up (do not add without fixing the underlying data):**
 - `Event` nodes on specials.html — the schedule shown is still sample content.

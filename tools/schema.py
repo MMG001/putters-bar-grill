@@ -229,26 +229,20 @@ def parse_menu(src):
 
 # ---------------------------------------------------------------- actions
 def entry_point(url):
-    return {"@type": "EntryPoint", "urlTemplate": url, "inLanguage": "en-US",
+    return {"@type": "EntryPoint", "urlTemplate": url,
             "actionPlatform": ["http://schema.org/DesktopWebPlatform",
                                "http://schema.org/MobileWebPlatform"]}
-
-def field(name):
-    return {"@type": "PropertyValueSpecification", "valueName": name, "valueRequired": True}
 
 def potential_actions():
     contact = entry_point(f"{DOMAIN}/contact.html#contactForm")
     careers = entry_point(f"{DOMAIN}/careers.html#careersForm")
     return [
         # contact.html form: name*, email*, message* (type select optional)
-        {"@type": "AskAction", "name": "Contact Putters Bar & Grill", "target": contact,
-         "name-input": field("name"), "email-input": field("email"), "message-input": field("message")},
+        {"@type": "AskAction", "name": "Contact Putters Bar & Grill", "target": contact},
         # same form, "Table Booking" option
-        {"@type": "ReserveAction", "name": "Book a Table", "target": contact,
-         "name-input": field("name"), "email-input": field("email"), "message-input": field("message")},
+        {"@type": "ReserveAction", "name": "Book a Table", "target": contact},
         # careers.html form: name*, email*, message* (phone, role optional)
-        {"@type": "ApplyAction", "name": "Apply to Join Our Team", "target": careers,
-         "name-input": field("name"), "email-input": field("email"), "message-input": field("message")},
+        {"@type": "ApplyAction", "name": "Apply to Join Our Team", "target": careers},
         {"@type": "CommunicateAction", "name": "Call Putters Bar & Grill",
          "target": entry_point(f"tel:{BUSINESS['phone']}")},
         {"@type": "CommunicateAction", "name": "Email Putters Bar & Grill",
