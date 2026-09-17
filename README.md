@@ -28,8 +28,11 @@ Never hand-edit the block between the `BEGIN/END JSON-LD SCHEMA` markers.
 
 Each page carries one `@graph`: `WebSite`, `BarOrPub` (the single business entity),
 `BreadcrumbList`, `WebPage` — plus the full `Menu` on menu.html. `areaServed` is a
-30-mile GeoCircle (48,280 m) with all 50 incorporated cities/villages and 7 counties
-inside it, each `sameAs`-linked to Wikipedia.
+10-mile GeoCircle (16,093 m) + the State (Wisconsin) + the 11 SERVICE_AREAS
+places shown in the about-page Service Area grid, each `sameAs`-linked to
+Wikipedia + verified Wikidata. Do not add cities that aren't visible on the
+site — the old invisible 50-city/7-county roster was removed 2026-09-16 as
+post-8/21 anti-spam hygiene.
 
 Forms POST to FormSubmit (see AGENTS.md — one-time email activation required).
 

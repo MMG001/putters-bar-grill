@@ -82,32 +82,8 @@ def bogey_factory_node():
                             "target": entry_point(BOGEY_FACTORY["booking"])},
     }
 
-SERVICE_RADIUS_MI = 30
-RADIUS_METERS = round(SERVICE_RADIUS_MI * 1609.34)  # 48280
-
-# Incorporated cities & villages within 30 mi of the business pin (haversine),
-# nearest first. wiki=None -> title pattern "{Name},_Wisconsin".
-# Brooklyn's article title verified as disambiguated (Sep 2026).
-CITIES = [
-    ("Verona", None, "Q1569520"), ("Fitchburg", None, "Q1570633"), ("Middleton", None, "Q1570640"),
-    ("Shorewood Hills", None), ("Belleville", None, "Q2609930"), ("Oregon", None, "Q936062"),
-    ("Madison", None, "Q43788"), ("Mount Horeb", None, "Q2226176"), ("Cross Plains", None, "Q2085810"),
-    ("Maple Bluff", None), ("Monona", None),
-    ("Brooklyn", "Brooklyn_(village),_Wisconsin", "Q2322312"),
-    ("McFarland", None), ("New Glarus", None), ("Black Earth", None),
-    ("Waunakee", None), ("Blue Mounds", None), ("Monticello", None),
-    ("Stoughton", None), ("Barneveld", None), ("Dane", None),
-    ("Cottage Grove", None), ("Mazomanie", None), ("Windsor", None, "Q8024546"),
-    ("Evansville", None), ("Albany", None), ("Blanchardville", None),
-    ("DeForest", None), ("Hollandale", None), ("Sun Prairie", None),
-    ("Sauk City", None), ("Lodi", None), ("Prairie du Sac", None),
-    ("Ridgeway", None), ("Arena", None), ("Deerfield", None),
-    ("Arlington", None), ("Rockdale", None), ("Argyle", None),
-    ("Edgerton", None), ("Cambridge", None), ("Brodhead", None),
-    ("Marshall", None), ("Merrimac", None), ("Monroe", None),
-    ("Footville", None), ("Poynette", None), ("Orfordville", None),
-    ("Spring Green", None), ("Dodgeville", None),
-]
+SERVICE_RADIUS_MI = 10
+RADIUS_METERS = round(SERVICE_RADIUS_MI * 1609.34)  # 16093
 
 # ------------------------------------------------- SERVICE AREAS (10-mi roster)
 # All Wikidata Q-IDs individually verified 2026-09-08. Coordinates from
@@ -145,8 +121,6 @@ def city_entity(area, url):
                              "sameAs": [WISCONSIN["wiki"],
                                         f"https://www.wikidata.org/wiki/{WISCONSIN['qid']}"]},
     }
-
-COUNTIES = ["Dane", "Green", "Iowa", "Rock", "Sauk", "Columbia", "Lafayette"]
 
 # Per-page metadata: breadcrumb trail (name, file) and WebPage subtype.
 PAGES = {
@@ -191,34 +165,26 @@ def head_meta(src):
 
 # ---------------------------------------------------------------- area served
 def area_served():
+    """GeoCircle (10 mi) + State + the 11 SERVICE_AREAS places — exactly the
+    roster shown in the about-page Service Area grid, so markup mirrors
+    visible content (rule 3). The invisible 50-city/7-county roster was
+    removed 2026-09-16 (post-8/21 anti-spam): cities we don't serve and
+    don't show confuse the geographic signal."""
     nodes = [{
-        "@type": "GeoCircle",
+        "@type": "GeoCircle", "@id": f"{DOMAIN}/#service-area",
         "geoMidpoint": {"@type": "GeoCoordinates",
                         "latitude": BUSINESS["lat"], "longitude": BUSINESS["lng"]},
         "geoRadius": RADIUS_METERS,
         "description": f"{SERVICE_RADIUS_MI}-mile radius around Putters Bar & Grill in Verona, WI",
+    }, {
+        "@type": "State", "name": "Wisconsin",
+        "sameAs": [WISCONSIN["wiki"],
+                   f"https://www.wikidata.org/wiki/{WISCONSIN['qid']}"],
     }]
-    for entry in CITIES:
-        name, wiki, qid = (entry + (None,))[:3] if len(entry) == 2 else entry
-        title = wiki or f"{name.replace(' ', '_')},_Wisconsin"
-        same = [f"https://en.wikipedia.org/wiki/{title}"]
-        if qid:  # Wikidata Q-IDs only when individually verified (rule 10)
-            same.append(f"https://www.wikidata.org/wiki/{qid}")
-        nodes.append({"@type": "City", "name": f"{name}, WI",
-                      "sameAs": same if len(same) > 1 else same[0]})
-    for name, lat, lng, qid, wiki in [
-        ("Paoli", 42.92944, -89.52361, "Q7132120", "Paoli,_Wisconsin"),
-        ("Riley", 43.02333, -89.62250, "Q7334167", "Riley,_Wisconsin"),
-        ("Mount Vernon", 42.94694, -89.65583, "Q6924346", "Mount_Vernon,_Wisconsin")]:
-        nodes.append({"@type": "Place", "name": f"{name}, WI",
+    for name, _f, _lat, _lng, qid, wiki, kind, _tag in SERVICE_AREAS:
+        nodes.append({"@type": kind, "name": f"{name}, WI",
                       "sameAs": [f"https://en.wikipedia.org/wiki/{wiki}",
                                  f"https://www.wikidata.org/wiki/{qid}"]})
-    for c in COUNTIES:
-        same = [f"https://en.wikipedia.org/wiki/{c}_County,_Wisconsin"]
-        if c == "Dane":  # Q-ID verified 2026-09-08
-            same.append("https://www.wikidata.org/wiki/Q502200")
-        nodes.append({"@type": "AdministrativeArea", "name": f"{c} County, WI",
-                      "sameAs": same if len(same) > 1 else same[0]})
     return nodes
 
 # ---------------------------------------------------------------- menu parser
