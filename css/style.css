@@ -225,7 +225,7 @@ h2 em { font-style: italic; color: var(--primary); }
 }
 .card:hover { border-color: var(--primary); box-shadow: inset 0 0 24px rgba(127, 218, 139, 0.06); }
 .card__icon { font-size: 26px; margin-bottom: 14px; }
-.card h3 { font-family: var(--font-display); font-weight: 700; font-size: 19px; text-transform: uppercase; margin-bottom: 10px; }
+.card h3, .card h2 { font-family: var(--font-display); font-weight: 700; font-size: 19px; text-transform: uppercase; margin-bottom: 10px; }
 .card p { color: var(--on-surface-variant); font-size: 15px; }
 
 /* ---------- Live now / schedule rows ---------- */
@@ -428,7 +428,7 @@ h2 em { font-style: italic; color: var(--primary); }
 .visit { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .info-card { background: var(--surface-container); border: 1px solid var(--outline-variant); border-radius: var(--r-lg); padding: 26px 24px; margin-bottom: 20px; }
 .info-card .kicker { margin-bottom: 10px; }
-.info-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 22px; text-transform: uppercase; margin-bottom: 8px; }
+.info-card h3, .info-card h2 { font-family: var(--font-display); font-weight: 700; font-size: 22px; text-transform: uppercase; margin-bottom: 8px; }
 .info-card p, .info-card address { font-style: normal; color: var(--on-surface); font-size: 16.5px; }
 .info-card small { display: block; color: var(--on-surface-variant); font-size: 14px; margin-top: 6px; }
 .hours { list-style: none; }

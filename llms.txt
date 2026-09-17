@@ -4,8 +4,8 @@
 > Verona, WI 53593 (formerly The Bogey Factory). Phone (608) 497-0170.
 > Hours: Mon-Fri 2-10 PM, Sat-Sun 11 AM-10 PM.
 > Big-screen TVs, scratch kitchen, tap beer, full bar, patio; indoor golf simulators on site (independently operated).
-> Serves southwest Dane County, WI within about a 10-mile radius, and the
-> greater Madison area within 30 miles.
+> Serves southwest Dane County, WI within about a 10-mile radius of
+> downtown Verona; guests from the greater Madison area welcome.
 
 Every page carries a schema.org JSON-LD @graph; the business entity is
 https://puttersverona.com/#business (BarOrPub).
