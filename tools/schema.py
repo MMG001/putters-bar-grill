@@ -41,7 +41,7 @@ BUSINESS = {
     "lat": 42.9884718, "lng": -89.5416319,   # from the business's Google Maps pin
     "phone": "+16084970170",
     "email": "hurley.puttersverona@yahoo.com",
-    "logo": f"{DOMAIN}/assets/logo.png",          # 1402x1122 raster
+    "logo": f"{DOMAIN}/assets/logo.png",          # 840x672 raster
     "image": f"{DOMAIN}/assets/img/hero-crowd.jpg",
     "map": "https://www.google.com/maps/place/Putters+Bar+%26+Grill+Verona/@42.9886555,-89.5416438,16z/data=!3m1!4b1!4m6!3m5!1s0x8807b18cc7d5dfd7:0xb3704b0fcae4fb56!8m2!3d42.9886555!4d-89.5416438!16s%2Fg%2F11nw0w6_xq",
     "cuisine": ["American"],
@@ -262,7 +262,7 @@ def business_node(on_menu_page):
         "@type": BUSINESS["type"], "@id": f"{DOMAIN}/#business",
         "name": BUSINESS["name"], "url": f"{DOMAIN}/",
         "image": BUSINESS["image"],
-        "logo": {"@type": "ImageObject", "url": BUSINESS["logo"], "width": 1402, "height": 1122},
+        "logo": {"@type": "ImageObject", "url": BUSINESS["logo"], "width": 840, "height": 672},
         "address": {"@type": "PostalAddress", "streetAddress": BUSINESS["street"],
                     "addressLocality": BUSINESS["city"], "addressRegion": BUSINESS["region"],
                     "postalCode": BUSINESS["zip"], "addressCountry": BUSINESS["country"]},
