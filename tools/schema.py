@@ -43,7 +43,7 @@ BUSINESS = {
     "email": "hurley.puttersverona@yahoo.com",
     "logo": f"{DOMAIN}/assets/logo.png",          # 1402x1122 raster
     "image": f"{DOMAIN}/assets/img/hero-crowd.jpg",
-    "map": "https://www.google.com/maps/search/?api=1&query=503+W+Verona+Ave+Suite+400+Verona+WI+53593",
+    "map": "https://www.google.com/maps/place/Putters+Bar+%26+Grill+Verona/@42.9886555,-89.5416438,16z/data=!3m1!4b1!4m6!3m5!1s0x8807b18cc7d5dfd7:0xb3704b0fcae4fb56!8m2!3d42.9886555!4d-89.5416438!16s%2Fg%2F11nw0w6_xq",
     "cuisine": ["American"],
     # Visible hours (contact.html): Mon-Fri 2-10 PM, Sat-Sun 11 AM-10 PM.
     "hours": [
