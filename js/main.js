@@ -193,3 +193,18 @@ wireForm("careersForm", function (d) {
     if (e.key === "ArrowRight") show(idx + 1);
   });
 })();
+
+/* Highlight today's special on specials.html */
+(function () {
+  var cards = document.querySelectorAll(".deal-card[data-days]");
+  if (!cards.length) return;
+  var today = String(new Date().getDay());
+  cards.forEach(function (c) {
+    if (c.getAttribute("data-days").split(",").indexOf(today) === -1) return;
+    c.classList.add("is-today");
+    var tag = document.createElement("span");
+    tag.className = "today-tag";
+    tag.textContent = "Today";
+    c.insertBefore(tag, c.firstChild);
+  });
+})();

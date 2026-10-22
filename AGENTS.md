@@ -92,8 +92,9 @@ route, rotating amenity chips + CTA, Nearby-communities links, and a generated
 ## Known open items (as of Sep 2026)
 - Hours: Mon–Fri 2–10 PM, Sat–Sun 11 AM–10 PM (schema includes all seven days).
   Weekday hours trace to the old Bogey Factory listing — unverified.
-- `specials.html` schedule and reviews are **sample content** — that's why
-  no Event schema exists.
+- `specials.html` daily specials are the real lineup (updated Oct 2026);
+  they're recurring deals, not events, so no Event schema. Home-page
+  reviews are still **sample content**.
 - `BUSINESS["sameAs"]` is empty pending the Google Business Profile URL.
 - FormSubmit requires one-time activation: the first submission emails an
   activation link to the Yahoo address; the owner must click it.

@@ -42,7 +42,7 @@ Required form fields (documented here, not in markup — `-input`
 - careers.html `#careersForm` → ApplyAction: name*, email*, message* (phone, role optional)
 
 **Intentionally NOT marked up (do not add without fixing the underlying data):**
-- `Event` nodes on specials.html — the schedule shown is still sample content.
+- `Event` nodes on specials.html — daily drink/food specials are recurring deals, not events.
 - `JobPosting` on careers.html — roles are a form dropdown, not dated postings.
 - `Review`/`AggregateRating` — no first-party reviews are collected on-site; if
   Google/Yelp reviews are ever *displayed*, they still must not be marked up.
