@@ -208,3 +208,22 @@ wireForm("careersForm", function (d) {
     (c.querySelector(".deal-card__img") || c).appendChild(tag);
   });
 })();
+
+/* Home specials teaser: highlight today + "Tonight" line */
+(function () {
+  var box = document.getElementById("dealTonight");
+  if (!box) return;
+  var deals = {
+    0: "Sunday: $1 bone-in wings all day",
+    1: "Tonight: $1 off all appetizers \u00b7 5\u20139 PM",
+    2: "Tonight: $9.99 flatbreads \u00b7 5\u20139 PM",
+    3: "Tonight: $9.99 burgers \u00b7 5\u20139 PM",
+    4: "Tonight: BOGO boneless wings \u00b7 5\u20139 PM",
+    5: "Today: $1 off fish fry all day",
+    6: "Saturday: $9.99 Italian beef or pulled pork all day"
+  };
+  var d = new Date().getDay();
+  box.querySelector(".deal-teaser__tonight").textContent = deals[d];
+  var pill = document.querySelector('.deal-week__day[data-day="' + d + '"]');
+  if (pill) { pill.classList.add("is-today"); pill.setAttribute("aria-current", "date"); }
+})();
