@@ -205,6 +205,6 @@ wireForm("careersForm", function (d) {
     var tag = document.createElement("span");
     tag.className = "today-tag";
     tag.textContent = "Today";
-    c.insertBefore(tag, c.firstChild);
+    (c.querySelector(".deal-card__img") || c).appendChild(tag);
   });
 })();

@@ -821,5 +821,18 @@ a.svc-row:hover .svc-tag { color: var(--on-surface); }
 .deal-list li { display: grid; grid-template-columns: 4.4em 1fr; gap: 12px; align-items: baseline; font-size: 15px; line-height: 1.4; }
 .deal-list b { font-family: var(--font-mono); font-weight: 700; font-size: 14.5px; color: var(--primary); white-space: nowrap; }
 .deal-list small { display: block; font-size: 12.5px; color: var(--on-surface-variant); margin-top: 2px; }
+.deal-card { padding-top: 0; overflow: hidden; }
+.deal-card__img { position: relative; aspect-ratio: 720 / 466; margin: 0 -24px 8px; overflow: hidden; border-bottom: 1px solid var(--outline-variant); }
+.deal-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.deal-card:hover .deal-card__img img { transform: scale(1.04); }
+.deal-card .today-tag { position: absolute; top: 14px; left: 14px; z-index: 1; box-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+.happy-hour { display: grid; grid-template-columns: minmax(0, 1fr); padding-bottom: 26px; }
+.happy-hour__body { display: flex; flex-direction: column; gap: 10px; }
+@media (min-width: 760px) {
+  .happy-hour { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: center; padding: 0 32px 0 0; }
+  .happy-hour .deal-card__img { margin: 0; height: 100%; border-bottom: 0; border-right: 1px solid var(--primary); }
+  .happy-hour h3 { font-size: 34px; }
+}
+@media (prefers-reduced-motion: reduce) { .deal-card__img img { transition: none; } .deal-card:hover .deal-card__img img { transform: none; } }
 .deal-card.is-today { border-color: var(--primary); box-shadow: 0 0 20px rgba(127, 218, 139, 0.12); }
-.deal-card .today-tag { align-self: flex-start; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--primary); color: var(--on-primary); border-radius: var(--r-sm); padding: 3px 8px; }
+.deal-card .today-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--primary); color: var(--on-primary); border-radius: var(--r-sm); padding: 3px 8px; }
