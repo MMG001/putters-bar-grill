@@ -875,3 +875,56 @@ a.svc-row:hover .svc-tag { color: var(--on-surface); }
 @media (prefers-reduced-motion: reduce) { .deal-card__img img { transition: none; } .deal-card:hover .deal-card__img img { transform: none; } }
 .deal-card.is-today { border-color: var(--primary); box-shadow: 0 0 20px rgba(127, 218, 139, 0.12); }
 .deal-card .today-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--primary); color: var(--on-primary); border-radius: var(--r-sm); padding: 3px 8px; }
+
+/* Cognito Forms embed (contact page) — match the dark theme */
+.cognito-embed .cog-form {
+  --font-family: var(--font-body);
+  --color: var(--on-surface);
+  --background-color: transparent;
+  --form__background-color: transparent;
+  --label__color: var(--on-surface-variant);
+  --label__font-family: var(--font-mono);
+  --input__background-color: var(--surface-low);
+  --input__color: var(--on-surface);
+  --input__border-color: var(--outline-variant);
+  --primary: var(--primary);
+  --primary-reverse: var(--on-primary);
+  --highlight: var(--primary);
+  --highlight-reverse: var(--on-primary);
+  --button-primary__background-color: var(--primary);
+  --button-primary__color: var(--on-primary);
+  --negative: #ff9d9d;
+  background: transparent !important;
+  color: var(--on-surface) !important;
+  font-family: var(--font-body) !important;
+}
+.cognito-embed .cog-form .cog-header { display: none !important; }
+.cognito-embed .cog-form .cog-form__container,
+.cognito-embed .cog-form .cog-body { background: transparent !important; padding-left: 0 !important; padding-right: 0 !important; }
+.cognito-embed .cog-form .cog-label {
+  font-family: var(--font-mono) !important; font-size: 11.5px !important; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--on-surface-variant) !important; font-weight: 400 !important;
+}
+.cognito-embed .cog-form input,
+.cognito-embed .cog-form select,
+.cognito-embed .cog-form textarea,
+.cognito-embed .cog-form .el-input__inner,
+.cognito-embed .cog-form .el-textarea__inner {
+  background: var(--surface-low) !important; color: var(--on-surface) !important;
+  border: 0 !important; border-bottom: 1px solid var(--outline-variant) !important;
+  border-radius: var(--r-sm) var(--r-sm) 0 0 !important; font-family: var(--font-body) !important;
+}
+.cognito-embed .cog-form input:focus,
+.cognito-embed .cog-form textarea:focus,
+.cognito-embed .cog-form .el-input__inner:focus,
+.cognito-embed .cog-form .el-textarea__inner:focus { border-bottom-color: var(--primary) !important; outline: none; }
+.cognito-embed .cog-form textarea, .cognito-embed .cog-form .el-textarea__inner { min-height: 130px; }
+.cognito-embed .cog-form .cog-button--submit,
+.cognito-embed .cog-form .cog-button--primary {
+  background: var(--primary) !important; color: var(--on-primary) !important; border: 0 !important;
+  font-family: var(--font-mono) !important; font-weight: 700 !important; letter-spacing: 0.12em;
+  text-transform: uppercase; border-radius: var(--r-sm) !important; padding: 14px 28px !important;
+}
+.cognito-embed .cog-form .cog-confirmation__message,
+.cognito-embed .cog-form .cog-confirmation { color: var(--primary) !important; background: transparent !important; }
+.cognito-embed .cog-form .cog-branding, .cognito-embed .cog-form .cog-abuse { opacity: 0.6; }

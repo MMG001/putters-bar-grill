@@ -52,6 +52,11 @@ tag + OG tags + sitemap.xml entry, add a visible breadcrumb nav, and
 re-run the generator.
 
 ## Forms
+**Contact form (Nov 2026):** now a Cognito Forms seamless embed (form "Putters Bar & Grill
+Contact Form" in the Web Leads account, notifications to info@puttersverona.com), wrapped in
+`<div id="contactForm" class="cognito-embed">` and themed by the `.cognito-embed` rules at the
+end of `css/style.css`. The notes below now apply to the careers form only.
+
 Both forms POST to FormSubmit (`formsubmit.co/ajax/<email>`), handled by
 `wireForm()` in `js/main.js` with inline `.form-status` feedback and a
 `_honey` honeypot. Required fields are name/email/message — these must

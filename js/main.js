@@ -95,9 +95,7 @@ function wireForm(formId, subjectFn) {
     }).finally(function () { if (btn) { btn.disabled = false; } });
   });
 }
-wireForm("contactForm", function (d) {
-  return "[" + (d.get("type") || "General") + "] Website message from " + d.get("name");
-});
+// Contact form is a Cognito Forms embed (see contact.html) — not wired here.
 wireForm("careersForm", function (d) {
   return "[Application: " + (d.get("role") || "Any role") + "] " + d.get("name");
 });
