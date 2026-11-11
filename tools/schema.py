@@ -40,7 +40,7 @@ BUSINESS = {
     "city": "Verona", "region": "WI", "zip": "53593", "country": "US",
     "lat": 42.9884718, "lng": -89.5416319,   # from the business's Google Maps pin
     "phone": "+16084970170",
-    "email": "hurley.puttersverona@yahoo.com",
+    "email": "info@puttersverona.com",
     "logo": f"{DOMAIN}/assets/logo.png",          # 840x672 raster
     "image": f"{DOMAIN}/assets/img/hero-crowd.jpg",
     "map": "https://www.google.com/maps/place/Putters+Bar+%26+Grill+Verona/@42.9886555,-89.5416438,16z/data=!3m1!4b1!4m6!3m5!1s0x8807b18cc7d5dfd7:0xb3704b0fcae4fb56!8m2!3d42.9886555!4d-89.5416438!16s%2Fg%2F11nw0w6_xq",

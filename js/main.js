@@ -79,7 +79,7 @@ function wireForm(formId, subjectFn) {
     if (btn) { btn.disabled = true; }
     status.textContent = "Sending\u2026";
     status.className = "form-status";
-    fetch("https://formsubmit.co/ajax/hurley.puttersverona@yahoo.com", {
+    fetch("https://formsubmit.co/ajax/info@puttersverona.com", {
       method: "POST",
       body: data,
       headers: { "Accept": "application/json" }
@@ -90,7 +90,7 @@ function wireForm(formId, subjectFn) {
         form.reset();
       } else { throw new Error(); }
     }).catch(function () {
-      status.textContent = "Something went wrong \u2014 please call us at (608) 497-0170 or email hurley.puttersverona@yahoo.com.";
+      status.textContent = "Something went wrong \u2014 please call us at (608) 497-0170 or email info@puttersverona.com.";
       status.className = "form-status form-status--err";
     }).finally(function () { if (btn) { btn.disabled = false; } });
   });

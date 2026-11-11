@@ -6,7 +6,7 @@ editing anything.
 ## What this is
 Static marketing site for **Putters Bar & Grill** (formerly The Bogey
 Factory), 503 W Verona Ave Suite 400, Verona, WI 53593 · (608) 497-0170 ·
-hurley.puttersverona@yahoo.com. Sports bar + 6 TrackMan golf simulator bays.
+info@puttersverona.com. Sports bar + 6 TrackMan golf simulator bays.
 Live at **https://puttersverona.com** (Vercel auto-deploys `main`; also
 mirrored on GitHub Pages). Hand-written HTML/CSS/JS — no framework, no
 build step, and keep it that way.
