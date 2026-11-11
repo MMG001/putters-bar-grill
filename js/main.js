@@ -65,40 +65,7 @@
   update();
 })();
 
-// Form submit -> FormSubmit AJAX endpoint (shows inline status)
-function wireForm(formId, subjectFn) {
-  var form = document.getElementById(formId);
-  if (!form) return;
-  var status = document.getElementById(formId + "Status");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('[type="submit"], button:not([type])');
-    var data = new FormData(form);
-    if (data.get("_honey")) return; // bot
-    data.append("_subject", subjectFn(data));
-    if (btn) { btn.disabled = true; }
-    status.textContent = "Sending\u2026";
-    status.className = "form-status";
-    fetch("https://formsubmit.co/ajax/info@puttersverona.com", {
-      method: "POST",
-      body: data,
-      headers: { "Accept": "application/json" }
-    }).then(function (r) { return r.json(); }).then(function (res) {
-      if (res.success === "true" || res.success === true) {
-        status.textContent = "Got it \u2014 thanks! We\u2019ll get back to you soon.";
-        status.className = "form-status form-status--ok";
-        form.reset();
-      } else { throw new Error(); }
-    }).catch(function () {
-      status.textContent = "Something went wrong \u2014 please call us at (608) 497-0170 or email info@puttersverona.com.";
-      status.className = "form-status form-status--err";
-    }).finally(function () { if (btn) { btn.disabled = false; } });
-  });
-}
-// Contact form is a Cognito Forms embed (see contact.html) — not wired here.
-wireForm("careersForm", function (d) {
-  return "[Application: " + (d.get("role") || "Any role") + "] " + d.get("name");
-});
+// Contact and careers forms are Cognito Forms embeds (see contact.html / careers.html).
 
 // Menu category tabs
 (function () {

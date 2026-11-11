@@ -52,18 +52,15 @@ tag + OG tags + sitemap.xml entry, add a visible breadcrumb nav, and
 re-run the generator.
 
 ## Forms
-**Contact form (Nov 2026):** now a Cognito Forms seamless embed (form "Putters Bar & Grill
-Contact Form" in the Web Leads account, notifications to info@puttersverona.com), wrapped in
-`<div id="contactForm" class="cognito-embed">` and themed by the `.cognito-embed` rules at the
-end of `css/style.css`. The notes below now apply to the careers form only.
-
-Both forms POST to FormSubmit (`formsubmit.co/ajax/<email>`), handled by
-`wireForm()` in `js/main.js` with inline `.form-status` feedback and a
-`_honey` honeypot. Required fields are name/email/message — these must
-stay 1:1 with the `PropertyValueSpecification` inputs in the schema's
-potentialActions. If the destination email ever changes, update:
-form `action` attributes, the fetch URL in `js/main.js`, `BUSINESS`
-in `tools/schema.py`, and the mailto links site-wide.
+Both forms are Cognito Forms seamless embeds (Web Leads account), each wrapped in
+`<div id="contactForm|careersForm" class="cognito-embed">` and themed by the
+`.cognito-embed` rules at the end of `css/style.css`:
+- contact.html -> "Putters Bar & Grill Contact Form" (data-form 272)
+- careers.html -> "Putters Bar & Grill Job Application" (data-form 273)
+Both notify info@puttersverona.com, which forwards to the owner (Google Workspace
+Admin > Gmail > Routing address map). To change fields or the notification
+address, edit the form in Cognito Forms, not the HTML. The wrapper ids must stay:
+the schema's potentialActions point at `#contactForm` / `#careersForm`.
 
 ## Content ground rules
 - Positioning: lead with "sports bar & grill" everywhere (titles, metas, copy) —
@@ -101,8 +98,6 @@ route, rotating amenity chips + CTA, Nearby-communities links, and a generated
   they're recurring deals, not events, so no Event schema. Home-page
   reviews are still **sample content**.
 - `BUSINESS["sameAs"]` is empty pending the Google Business Profile URL.
-- FormSubmit requires one-time activation: the first submission emails an
-  activation link to the Yahoo address; the owner must click it.
 
 ## Workflow
 Commit as `MMG001 <MMG001@users.noreply.github.com>`. Push to `main`
